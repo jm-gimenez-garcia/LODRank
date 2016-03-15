@@ -21,16 +21,16 @@ import org.apache.jena.riot.RiotException;
  */
 public class LODRank {
 
-	static final String DEFAULT_CONFIG_PATH = "res";
-	static final String PROCESSED_TRIPLES_FILE = "ProcessedTriples.dat";
-	static final String PROCESSED_DATASETS_FILE = "ProcessedDatasets.dat";
+	static final String	DEFAULT_CONFIG_PATH		= "res";
+	static final String	PROCESSED_TRIPLES_FILE	= "ProcessedTriples.dat";
+	static final String	PROCESSED_DATASETS_FILE	= "ProcessedDatasets.dat";
 
-	HashSet<String> processedDatasets;
-	int numDatasets;
-	long numTriples;
-	int step = 1, start = 1;
+	HashSet<String>		processedDatasets;
+	int					numDatasets;
+	long				numTriples;
+	int					step					= 1, start = 1;
 
-	OutlinkExtractor outlinkExtractor;
+	OutlinkExtractor	outlinkExtractor;
 
 	public static void main(String[] args) {
 		LODRank lodrank = new LODRank();
@@ -107,8 +107,11 @@ public class LODRank {
 						outlinks = outlinkExtractor.processDataset(urls[1], urls[0]);
 						Thread t = new Thread(new OutlinkWriter(outlinks.getKey(), outlinks.getValue()));
 						t.start();
+					} catch (FileNotFoundException e) {
+						System.err.println("No cleaned file found for dataset " + urls[1]);
+						System.err.println("Resuming the process...");
 					} catch (RiotException e) {
-						System.err.println("Error while processing dataset " + urls[1]);
+						System.err.println("Error with Jena Parser while processing dataset " + urls[1]);
 						System.err.println("Resuming the process...");
 					}
 				} else {

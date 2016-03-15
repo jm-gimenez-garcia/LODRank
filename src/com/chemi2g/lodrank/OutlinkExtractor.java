@@ -1,5 +1,6 @@
 package com.chemi2g.lodrank;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
@@ -29,12 +30,12 @@ import org.apache.jena.riot.lang.PipedTriplesStream;
 
 public class OutlinkExtractor {
 
-	static final String QUADS_END = ".nq.gz";
-	static final String LODLAUNDROMAT_ENDPOINT = "http://sparql.backend.lodlaundromat.org";
-	static final String DATASET_URI_QUERY = "SELECT ?url WHERE {<%s> <http://lodlaundromat.org/ontology/url> ?url}";
-	static final String DATASET_URI_QUERY_WITH_ARCHIVE = "SELECT ?url WHERE {?archive <http://lodlaundromat.org/ontology/containsEntry> <%s> . ?archive <http://lodlaundromat.org/ontology/url> ?url}";
+	static final String	QUADS_END						= ".nq.gz";
+	static final String	LODLAUNDROMAT_ENDPOINT			= "http://sparql.backend.lodlaundromat.org";
+	static final String	DATASET_URI_QUERY				= "SELECT ?url WHERE {<%s> <http://lodlaundromat.org/ontology/url> ?url}";
+	static final String	DATASET_URI_QUERY_WITH_ARCHIVE	= "SELECT ?url WHERE {?archive <http://lodlaundromat.org/ontology/containsEntry> <%s> . ?archive <http://lodlaundromat.org/ontology/url> ?url}";
 
-	long numTriples;
+	long				numTriples;
 
 	public long getNumTriples() {
 		return numTriples;
@@ -56,7 +57,7 @@ public class OutlinkExtractor {
 		return url;
 	}
 
-	Entry<String, Set<String>> processDataset(String resource, String download) throws RiotException, IOException {
+	Entry<String, Set<String>> processDataset(String resource, String download) throws FileNotFoundException, RiotException, IOException {
 		PipedRDFIterator<Triple> triples = new PipedRDFIterator<Triple>();
 		PipedRDFStream<Triple> rdfStream = new PipedTriplesStream(triples);
 		ExecutorService executor = Executors.newSingleThreadExecutor();
@@ -110,8 +111,7 @@ public class OutlinkExtractor {
 		}
 
 		numTriples += datasetTriples;
-		System.out.println(new Timestamp(date.getTime()) + " Finished processing " + datasetPLD + ". Dataset triples: "
-				+ datasetTriples + ". Total triples: " + numTriples);
+		System.out.println(new Timestamp(date.getTime()) + " Finished processing " + datasetPLD + ". Dataset triples: " + datasetTriples + ". Total triples: " + numTriples);
 
 		return new SimpleEntry<String, Set<String>>(datasetPLD, outlinks);
 	}

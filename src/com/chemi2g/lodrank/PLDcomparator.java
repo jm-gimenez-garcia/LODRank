@@ -11,13 +11,12 @@ import java.util.regex.Pattern;
 
 public class PLDcomparator {
 
-	static final String PATH_DOMAINS = "res/public_suffix_list.dat";
+	static final String	PATH_DOMAINS			= "res/public_suffix_list.dat";
 
-	List<Pattern> ccSLDpatterns = new LinkedList<Pattern>();
-	Deque<Pattern> ccSLDpatterns_recent = new LinkedList<Pattern>();
+	List<Pattern>		ccSLDpatterns			= new LinkedList<Pattern>();
+	Deque<Pattern>		ccSLDpatterns_recent	= new LinkedList<Pattern>();
 
-	String pld = null;
-	Matcher matcher;
+	Matcher				matcher;
 
 	public PLDcomparator(String path) {
 		readDictionary(path);
@@ -51,6 +50,8 @@ public class PLDcomparator {
 	}
 
 	String getPLD(String url) {
+
+		String pld = null;
 
 		// first look up in recent patterns
 		for (Pattern pattern : ccSLDpatterns_recent) {
