@@ -29,7 +29,6 @@ public class PLDcomparator {
 
 	void readDictionary(String path) {
 		String line;
-
 		BufferedReader reader;
 		try {
 			reader = new BufferedReader(new FileReader(path));

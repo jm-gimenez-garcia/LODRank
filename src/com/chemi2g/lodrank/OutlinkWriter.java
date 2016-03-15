@@ -12,6 +12,7 @@ import java.util.zip.GZIPOutputStream;
 
 public class OutlinkWriter implements Runnable {
 
+	static final String DEFAULT_OUTPUT_FOLDER = "output";
 	static final String GZIP_EXTENSION = ".gz";
 
 	String datasetPLD;
@@ -22,12 +23,12 @@ public class OutlinkWriter implements Runnable {
 		this.outlinks = outlinks;
 	}
 
-	public void run() {
+	public void run(String path) {
 		Writer writer = null;
 		try {
 			Date date = new Date();
 			if (outlinks.size() != 0) {
-				File file = new File(datasetPLD.toString() + GZIP_EXTENSION);
+				File file = new File(path + "/" + datasetPLD.toString() + GZIP_EXTENSION);
 				writer = new OutputStreamWriter(new GZIPOutputStream(new FileOutputStream(file, true)));
 				System.out.println(new Timestamp(date.getTime()) + " Writing dataset " + datasetPLD.toString() + " to "
 						+ file.getAbsolutePath());
@@ -53,5 +54,9 @@ public class OutlinkWriter implements Runnable {
 				}
 			}
 		}
+	}
+
+	public void run() {
+		run(DEFAULT_OUTPUT_FOLDER);
 	}
 }

@@ -4,32 +4,16 @@
 package com.chemi2g.lodrank;
 
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.sql.Timestamp;
-import java.util.AbstractMap.SimpleEntry;
-import java.util.Date;
 import java.util.HashSet;
 import java.util.Map.Entry;
 import java.util.Set;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.zip.GZIPInputStream;
 
-import org.apache.jena.graph.Triple;
-import org.apache.jena.query.Query;
-import org.apache.jena.query.QueryExecution;
-import org.apache.jena.query.QueryExecutionFactory;
-import org.apache.jena.query.QueryFactory;
-import org.apache.jena.query.ResultSet;
-import org.apache.jena.riot.Lang;
-import org.apache.jena.riot.RDFDataMgr;
-import org.apache.jena.riot.lang.PipedRDFIterator;
-import org.apache.jena.riot.lang.PipedRDFStream;
-import org.apache.jena.riot.lang.PipedTriplesStream;
+import org.apache.jena.riot.RiotException;
 
 /**
  * @author chemi2g
@@ -37,119 +21,120 @@ import org.apache.jena.riot.lang.PipedTriplesStream;
  */
 public class LODRank {
 
-	static final String QUADS_END = ".nq.gz";
+	static final String DEFAULT_CONFIG_PATH = "res";
+	static final String PROCESSED_TRIPLES_FILE = "ProcessedTriples.dat";
+	static final String PROCESSED_DATASETS_FILE = "ProcessedDatasets.dat";
 
-	static final String LODLAUNDROMAT_ENDPOINT = "http://sparql.backend.lodlaundromat.org";
-	static final String DATASET_URI_QUERY = "SELECT ?url WHERE {<%s> <http://lodlaundromat.org/ontology/url> ?url}";
-	static final String DATASET_URI_QUERY_WITH_ARCHIVE = "SELECT ?url WHERE {?archive <http://lodlaundromat.org/ontology/containsEntry> <%s> . ?archive <http://lodlaundromat.org/ontology/url> ?url}";
+	HashSet<String> processedDatasets;
+	int numDatasets;
+	long numTriples;
+	int step = 1, start = 1;
 
-	long processedTriples = 0;
+	OutlinkExtractor outlinkExtractor;
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
-
 		LODRank lodrank = new LODRank();
-		// lodrank.readDictionary();
+		// lodrank.readPartialProcessing(DEFAULT_PATH);
+		if (args.length == 1) {
+			lodrank.setStep(Integer.parseInt(args[0]));
+			lodrank.setStart(Integer.parseInt(args[0]));
+		} else if (args.length >= 2) {
+			lodrank.setStep(Integer.parseInt(args[0]));
+			lodrank.setStart(Integer.parseInt(args[1]));
+		}
 		lodrank.run();
 	}
 
-	URL query(String queryString, String endpoint) throws MalformedURLException {
-		URL url = null;
-		Query query = QueryFactory.create(queryString);
-		QueryExecution qexec = QueryExecutionFactory.sparqlService(endpoint, query);
-		ResultSet results = qexec.execSelect();
-		if (results.hasNext()) {
-			// if (results.hasNext()) {
-			// throw new MultipleResultsException("More than one result when
-			// querying for dataset PLD");
-			// }
-			url = new URL(results.next().getResource("url").toString());
-		}
-		qexec.close();
-		return url;
-	}
-
-	Entry<String, Set<String>> processDataset(final String[] urls) {
-		PipedRDFIterator<Triple> triples = new PipedRDFIterator<Triple>();
-		final PipedRDFStream<Triple> rdfStream = new PipedTriplesStream(triples);
-		ExecutorService executor = Executors.newSingleThreadExecutor();
-		String datasetPLD = null;
-		Set<String> outlinks = new HashSet<String>();
-		Triple triple;
-		String resourcePLD;
-		PLDcomparator pldComparator = new PLDcomparator();
-		Date date = new Date();
-		long datasetTriples = 0;
+	void readPartialProcessing(String path) {
+		BufferedReader reader = null;
+		File file;
+		String line;
+		// File fileDatasets = new File(path + "/" + PROCESSED_DATASETS_FILE);
 		try {
-			URL datasetUrl;
-			if ((datasetUrl = query(String.format(DATASET_URI_QUERY, urls[1]), LODLAUNDROMAT_ENDPOINT)) == null) {
-				datasetUrl = query(String.format(DATASET_URI_QUERY_WITH_ARCHIVE, urls[1]), LODLAUNDROMAT_ENDPOINT);
+			try {
+				// Read number of triples
+				file = new File(path + "/" + PROCESSED_TRIPLES_FILE);
+				reader = new BufferedReader(new FileReader(file));
+				numTriples = Long.parseLong(reader.readLine());
+				reader.close();
+			} catch (NumberFormatException e) {
+				processedDatasets = new HashSet<>();
+				numTriples = 0;
+				numDatasets = 0;
+				System.err.println("Error reading number of triples processed. Starting count again.");
 			}
-			datasetPLD = pldComparator.getPLD(datasetUrl.toString());
-			System.out.println(new Timestamp(date.getTime()) + " Processing dataset " + datasetPLD);
-			URL downloadUrl = new URL(urls[0]);
-			final InputStream stream = new GZIPInputStream(downloadUrl.openStream());
-
-			// Create a runnable for our parser thread
-			Runnable parser = new Runnable() {
-				@Override
-				public void run() {
-					// Call the parsing process.
-					if (urls[0].endsWith(QUADS_END)) {
-						RDFDataMgr.parse(rdfStream, stream, Lang.NQUADS);
-					} else {
-						RDFDataMgr.parse(rdfStream, stream, Lang.NTRIPLES);
-					}
-				}
-			};
-
-			// Start the parser on another thread
-			executor.submit(parser);
-
-			while (triples.hasNext()) {
-				datasetTriples++;
-				triple = triples.next();
-				if (triple.getSubject().isURI()) {
-					resourcePLD = pldComparator.getPLD(triple.getSubject().toString());
-					if (resourcePLD != null && !datasetPLD.equals(resourcePLD)) {
-						outlinks.add(resourcePLD);
-					}
-				}
-				if (triple.getObject().isURI()) {
-					resourcePLD = pldComparator.getPLD(triple.getObject().toString());
-					if (resourcePLD != null && !datasetPLD.equals(resourcePLD)) {
-						outlinks.add(resourcePLD);
-					}
-				}
+			// Read already processed datasets
+			file = new File(path + "/" + PROCESSED_DATASETS_FILE);
+			reader = new BufferedReader(new FileReader(file));
+			while ((line = reader.readLine()) == null) {
+				processedDatasets.add(line);
+				numDatasets++;
 			}
-			processedTriples += datasetTriples;
-			System.out.println(new Timestamp(date.getTime()) + " Finished processing " + datasetPLD
-					+ ". Dataset triples: " + datasetTriples + ". Total triples: " + processedTriples);
+		} catch (FileNotFoundException e) {
+			System.err.println("No files to retrieve partial processing status. Starting again.");
+			processedDatasets = new HashSet<>();
+			numTriples = 0;
+			numDatasets = 0;
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
+			System.err.println("Error while retrieven partial processing status. Starting again.");
+			processedDatasets = new HashSet<>();
+			numTriples = 0;
+			numDatasets = 0;
+		} finally {
+			if (reader != null) {
+				try {
+					reader.close();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
 		}
-
-		return new SimpleEntry<String, Set<String>>(datasetPLD, outlinks);
 	}
 
 	void run() {
-		String line;
+		outlinkExtractor = new OutlinkExtractor();
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+		String line;
+		int numLine = 0;
 		try {
 			while ((line = reader.readLine()) != null) {
-				String[] urls = line.split(" ");
-				Entry<String, Set<String>> outlinks = processDataset(urls);
-				Thread t = new Thread(new OutlinkWriter(outlinks.getKey(), outlinks.getValue()));
-				t.start();
+				if (((++numLine) - getStart()) % getStep() == 0) {
+					String[] urls = line.split(" ");
+					Entry<String, Set<String>> outlinks;
+					try {
+						outlinks = outlinkExtractor.processDataset(urls[1], urls[0]);
+						Thread t = new Thread(new OutlinkWriter(outlinks.getKey(), outlinks.getValue()));
+						t.start();
+					} catch (RiotException e) {
+						System.err.println("Error while processing dataset " + urls[1]);
+						System.err.println("Resuming the process...");
+					}
+				} else {
+					System.out.println("Dataset " + numLine + " ignored");
+				}
 			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
 
+	public int getStep() {
+		return step;
+	}
+
+	public int getStart() {
+		return start;
+	}
+
+	public void setStep(int step) {
+		this.step = step;
+	}
+
+	public void setStart(int start) {
+		this.start = start;
 	}
 
 }
