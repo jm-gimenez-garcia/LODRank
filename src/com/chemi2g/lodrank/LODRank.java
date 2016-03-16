@@ -145,11 +145,15 @@ public class LODRank {
 								processedDatasetsWriter.write(urls[1] + "\n");
 							}
 						} catch (FileNotFoundException e) {
-							System.err.println(new Timestamp(date.getTime()) + "No cleaned file found for dataset " + urls[1]);
-							System.err.println(new Timestamp(date.getTime()) + "Resuming the process...");
+							System.err.println(new Timestamp(date.getTime()) + " No cleaned file found for dataset " + urls[1]);
+							System.err.println(new Timestamp(date.getTime()) + " Resuming the process...");
 						} catch (RiotException e) {
-							System.err.println(new Timestamp(date.getTime()) + "Error with Jena Parser while processing dataset " + urls[1]);
-							System.err.println(new Timestamp(date.getTime()) + "Resuming the process...");
+							System.err.println(new Timestamp(date.getTime()) + " Error with Jena Parser while processing dataset " + urls[1]);
+							System.err.println(new Timestamp(date.getTime()) + " Resuming the process...");
+						} catch (IOException e) {
+							System.err.println(new Timestamp(date.getTime()) + " IOException while processing dataset " + urls[1]);
+							e.printStackTrace();
+							System.err.println(new Timestamp(date.getTime()) + " Resuming the process...");
 						}
 					} else {
 						System.out.println(new Timestamp(date.getTime()) + urls[1] + " already processed. Skipping.");
