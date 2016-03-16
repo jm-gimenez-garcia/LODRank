@@ -58,6 +58,7 @@ public class OutlinkExtractor {
 	}
 
 	Entry<String, Set<String>> processDataset(String resource, String download) throws FileNotFoundException, RiotException, IOException {
+		Entry<String, Set<String>> processedDataset = null;
 		PipedRDFIterator<Triple> triples = new PipedRDFIterator<Triple>();
 		PipedRDFStream<Triple> rdfStream = new PipedTriplesStream(triples);
 		ExecutorService executor = Executors.newSingleThreadExecutor();
@@ -72,48 +73,52 @@ public class OutlinkExtractor {
 		if ((datasetUrl = query(String.format(DATASET_URI_QUERY, resource), LODLAUNDROMAT_ENDPOINT)) == null) {
 			datasetUrl = query(String.format(DATASET_URI_QUERY_WITH_ARCHIVE, resource), LODLAUNDROMAT_ENDPOINT);
 		}
-		datasetPLD = pldComparator.getPLD(datasetUrl.toString());
-		System.out.println(new Timestamp(date.getTime()) + " Processing dataset " + datasetPLD);
-		URL downloadUrl = new URL(download);
-		final InputStream stream = new GZIPInputStream(downloadUrl.openStream());
+		if ((datasetPLD = pldComparator.getPLD(datasetUrl.toString())) != null) {
+			System.out.println(new Timestamp(date.getTime()) + " Processing dataset " + datasetPLD);
+			URL downloadUrl = new URL(download);
+			final InputStream stream = new GZIPInputStream(downloadUrl.openStream());
 
-		// Create a runnable for our parser thread
-		Runnable parser = new Runnable() {
-			@Override
-			public void run() {
-				// Call the parsing process.
-				if (download.endsWith(QUADS_END)) {
-					RDFDataMgr.parse(rdfStream, stream, Lang.NQUADS);
-				} else {
-					RDFDataMgr.parse(rdfStream, stream, Lang.NTRIPLES);
+			// Create a runnable for our parser thread
+			Runnable parser = new Runnable() {
+				@Override
+				public void run() {
+					// Call the parsing process.
+					if (download.endsWith(QUADS_END)) {
+						RDFDataMgr.parse(rdfStream, stream, Lang.NQUADS);
+					} else {
+						RDFDataMgr.parse(rdfStream, stream, Lang.NTRIPLES);
+					}
+				}
+			};
+
+			// Start the parser on another thread
+			executor.submit(parser);
+
+			while (triples.hasNext()) {
+				datasetTriples++;
+				triple = triples.next();
+				if (triple.getSubject().isURI()) {
+					resourcePLD = pldComparator.getPLD(triple.getSubject().toString());
+					if (resourcePLD != null && !datasetPLD.equals(resourcePLD)) {
+						outlinks.add(resourcePLD);
+					}
+				}
+				if (triple.getObject().isURI()) {
+					resourcePLD = pldComparator.getPLD(triple.getObject().toString());
+					if (resourcePLD != null && !datasetPLD.equals(resourcePLD)) {
+						outlinks.add(resourcePLD);
+					}
 				}
 			}
-		};
 
-		// Start the parser on another thread
-		executor.submit(parser);
+			numTriples += datasetTriples;
+			System.out.println(new Timestamp(date.getTime()) + " Finished processing " + datasetPLD + ". Dataset triples: " + datasetTriples + ". Total triples: " + numTriples);
 
-		while (triples.hasNext()) {
-			datasetTriples++;
-			triple = triples.next();
-			if (triple.getSubject().isURI()) {
-				resourcePLD = pldComparator.getPLD(triple.getSubject().toString());
-				if (resourcePLD != null && !datasetPLD.equals(resourcePLD)) {
-					outlinks.add(resourcePLD);
-				}
-			}
-			if (triple.getObject().isURI()) {
-				resourcePLD = pldComparator.getPLD(triple.getObject().toString());
-				if (resourcePLD != null && !datasetPLD.equals(resourcePLD)) {
-					outlinks.add(resourcePLD);
-				}
-			}
+			processedDataset = new SimpleEntry<String, Set<String>>(datasetPLD, outlinks);
+		} else {
+			System.out.println(new Timestamp(date.getTime()) + " Not valid PLD for " + resource + ". Skipping dataset");
 		}
-
-		numTriples += datasetTriples;
-		System.out.println(new Timestamp(date.getTime()) + " Finished processing " + datasetPLD + ". Dataset triples: " + datasetTriples + ". Total triples: " + numTriples);
-
-		return new SimpleEntry<String, Set<String>>(datasetPLD, outlinks);
+		return processedDataset;
 	}
 
 }

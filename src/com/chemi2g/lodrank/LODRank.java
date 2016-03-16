@@ -104,9 +104,10 @@ public class LODRank {
 					String[] urls = line.split(" ");
 					Entry<String, Set<String>> outlinks;
 					try {
-						outlinks = outlinkExtractor.processDataset(urls[1], urls[0]);
-						Thread t = new Thread(new OutlinkWriter(outlinks.getKey(), outlinks.getValue()));
-						t.start();
+						if ((outlinks = outlinkExtractor.processDataset(urls[1], urls[0])) != null) {
+							Thread t = new Thread(new OutlinkWriter(outlinks.getKey(), outlinks.getValue()));
+							t.start();
+						}
 					} catch (FileNotFoundException e) {
 						System.err.println("No cleaned file found for dataset " + urls[1]);
 						System.err.println("Resuming the process...");
@@ -115,7 +116,7 @@ public class LODRank {
 						System.err.println("Resuming the process...");
 					}
 				} else {
-					System.out.println("Dataset " + numLine + " ignored");
+					// System.out.println("Dataset " + numLine + " ignored");
 				}
 			}
 		} catch (IOException e) {
