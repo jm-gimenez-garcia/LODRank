@@ -37,8 +37,12 @@ public class OutlinkExtractor {
 
 	long				numTriples;
 
-	public long getNumTriples() {
-		return numTriples;
+	public OutlinkExtractor(long numTriples) {
+		this.numTriples = numTriples;
+	}
+
+	public OutlinkExtractor() {
+		this(0);
 	}
 
 	URL query(String queryString, String endpoint) throws MalformedURLException {
@@ -116,9 +120,12 @@ public class OutlinkExtractor {
 
 			processedDataset = new SimpleEntry<String, Set<String>>(datasetPLD, outlinks);
 		} else {
-			System.out.println(new Timestamp(date.getTime()) + " Not valid PLD for " + resource + ". Skipping dataset");
+			System.out.println(new Timestamp(date.getTime()) + " No valid PLD for " + datasetUrl.toString() + ". Skipping dataset");
 		}
 		return processedDataset;
 	}
 
+	public long getNumTriples() {
+		return numTriples;
+	}
 }

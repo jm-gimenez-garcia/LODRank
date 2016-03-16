@@ -12,14 +12,14 @@ import java.util.zip.GZIPOutputStream;
 
 public class OutlinkWriter implements Runnable {
 
-	static final String DEFAULT_OUTPUT_FOLDER = "output";
-	static final String GZIP_EXTENSION = ".gz";
+	static final String	DEFAULT_OUTPUT_FOLDER	= "output";
+	static final String	GZIP_EXTENSION			= ".gz";
 
-	String datasetPLD;
-	Set<String> outlinks;
+	String				datasetPLD;
+	Set<String>			outlinks;
 
 	public OutlinkWriter(String datasetPLD, Set<String> outlinks) {
-		this.datasetPLD = datasetPLD;
+		this.datasetPLD = datasetPLD.replace("/", ".");
 		this.outlinks = outlinks;
 	}
 
@@ -28,15 +28,13 @@ public class OutlinkWriter implements Runnable {
 		try {
 			Date date = new Date();
 			if (outlinks.size() != 0) {
-				File file = new File(path + "/" + datasetPLD.toString() + GZIP_EXTENSION);
+				File file = new File(path + "/" + datasetPLD + GZIP_EXTENSION);
 				writer = new OutputStreamWriter(new GZIPOutputStream(new FileOutputStream(file, true)));
-				System.out.println(new Timestamp(date.getTime()) + " Writing dataset " + datasetPLD.toString() + " to "
-						+ file.getAbsolutePath());
+				System.out.println(new Timestamp(date.getTime()) + " Writing dataset " + datasetPLD + " to " + file.getAbsolutePath());
 				for (String outlink : outlinks) {
 					writer.write(datasetPLD + " " + outlink + "\n");
 				}
-				System.out.println(new Timestamp(date.getTime()) + " Finished writing dataset. Outlinks written: "
-						+ outlinks.size());
+				System.out.println(new Timestamp(date.getTime()) + " Finished writing dataset. Outlinks written: " + outlinks.size());
 			} else {
 				System.out.println(new Timestamp(date.getTime()) + " No outlinks for dataset " + datasetPLD);
 			}
