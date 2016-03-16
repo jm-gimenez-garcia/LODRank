@@ -11,6 +11,8 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.sql.Timestamp;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -33,6 +35,7 @@ public class LODRank {
 	int					step					= 1, start = 1;
 
 	OutlinkExtractor	outlinkExtractor;
+	Date				date					= new Date();
 
 	public static void main(String[] args) {
 		LODRank lodrank = new LODRank();
@@ -142,14 +145,14 @@ public class LODRank {
 								processedDatasetsWriter.write(urls[1] + "\n");
 							}
 						} catch (FileNotFoundException e) {
-							System.err.println("No cleaned file found for dataset " + urls[1]);
-							System.err.println("Resuming the process...");
+							System.err.println(new Timestamp(date.getTime()) + "No cleaned file found for dataset " + urls[1]);
+							System.err.println(new Timestamp(date.getTime()) + "Resuming the process...");
 						} catch (RiotException e) {
-							System.err.println("Error with Jena Parser while processing dataset " + urls[1]);
-							System.err.println("Resuming the process...");
+							System.err.println(new Timestamp(date.getTime()) + "Error with Jena Parser while processing dataset " + urls[1]);
+							System.err.println(new Timestamp(date.getTime()) + "Resuming the process...");
 						}
 					} else {
-						System.out.println(urls[1] + " already processed. Skipping.");
+						System.out.println(new Timestamp(date.getTime()) + urls[1] + " already processed. Skipping.");
 					}
 				}
 				// else {

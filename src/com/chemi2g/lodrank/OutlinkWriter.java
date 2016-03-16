@@ -15,6 +15,8 @@ public class OutlinkWriter implements Runnable {
 	static final String	DEFAULT_OUTPUT_FOLDER	= "output";
 	static final String	GZIP_EXTENSION			= ".gz";
 
+	Date				date					= new Date();
+
 	String				datasetPLD;
 	Set<String>			outlinks;
 
@@ -26,7 +28,6 @@ public class OutlinkWriter implements Runnable {
 	public void run(String path) {
 		Writer writer = null;
 		try {
-			Date date = new Date();
 			if (outlinks.size() != 0) {
 				File file = new File(path + "/" + datasetPLD + GZIP_EXTENSION);
 				writer = new OutputStreamWriter(new GZIPOutputStream(new FileOutputStream(file, true)));

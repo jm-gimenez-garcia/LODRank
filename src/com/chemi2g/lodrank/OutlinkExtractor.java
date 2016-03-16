@@ -35,6 +35,8 @@ public class OutlinkExtractor {
 	static final String	DATASET_URI_QUERY				= "SELECT ?url WHERE {<%s> <http://lodlaundromat.org/ontology/url> ?url}";
 	static final String	DATASET_URI_QUERY_WITH_ARCHIVE	= "SELECT ?url WHERE {?archive <http://lodlaundromat.org/ontology/containsEntry> <%s> . ?archive <http://lodlaundromat.org/ontology/url> ?url}";
 
+	Date				date							= new Date();
+
 	long				numTriples;
 
 	public OutlinkExtractor(long numTriples) {
@@ -71,13 +73,12 @@ public class OutlinkExtractor {
 		Triple triple;
 		String resourcePLD;
 		PLDcomparator pldComparator = new PLDcomparator();
-		Date date = new Date();
 		long datasetTriples = 0;
 		URL datasetUrl;
 		if ((datasetUrl = query(String.format(DATASET_URI_QUERY, resource), LODLAUNDROMAT_ENDPOINT)) == null) {
 			datasetUrl = query(String.format(DATASET_URI_QUERY_WITH_ARCHIVE, resource), LODLAUNDROMAT_ENDPOINT);
 		}
-		if ((datasetPLD = pldComparator.getPLD(datasetUrl.toString())) != null) {
+		if ((datasetPLD = pldComparator.getPLD(datasetUrl)) != null) {
 			System.out.println(new Timestamp(date.getTime()) + " Processing dataset " + datasetPLD);
 			URL downloadUrl = new URL(download);
 			final InputStream stream = new GZIPInputStream(downloadUrl.openStream());
