@@ -15,6 +15,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.zip.GZIPInputStream;
 
+import org.apache.jena.atlas.web.HttpException;
 import org.apache.jena.graph.Triple;
 import org.apache.jena.query.Query;
 import org.apache.jena.query.QueryExecution;
@@ -49,21 +50,27 @@ public class OutlinkExtractor {
 
 	URL query(String queryString, String endpoint) throws MalformedURLException {
 		URL url = null;
-		Query query = QueryFactory.create(queryString);
-		QueryExecution qexec = QueryExecutionFactory.sparqlService(endpoint, query);
-		ResultSet results = qexec.execSelect();
-		if (results.hasNext()) {
-			// if (results.hasNext()) {
-			// throw new MultipleResultsException("More than one result when
-			// querying for dataset PLD");
-			// }
-			url = new URL(results.next().getResource("url").toString());
+		try {
+			Query query = QueryFactory.create(queryString);
+			QueryExecution qexec = QueryExecutionFactory.sparqlService(endpoint, query);
+			ResultSet results = qexec.execSelect();
+			if (results.hasNext()) {
+				// if (results.hasNext()) {
+				// throw new MultipleResultsException("More than one result when
+				// querying for dataset PLD");
+				// }
+				url = new URL(results.next().getResource("url").toString());
+			}
+			qexec.close();
+		} catch (HttpException e) {
+			System.err.println(new Timestamp(date.getTime()) + " HttpException while querying SPARQL endpoint");
+			e.printStackTrace();
+			System.err.println(new Timestamp(date.getTime()) + " Resuming the process...");
 		}
-		qexec.close();
 		return url;
 	}
 
-	Entry<String, Set<String>> processDataset(String resource, String download) throws FileNotFoundException, RiotException, IOException {
+	Entry<String, Set<String>> processDataset(String resource, String download) throws HttpException, FileNotFoundException, RiotException, IOException {
 		Entry<String, Set<String>> processedDataset = null;
 		PipedRDFIterator<Triple> triples = new PipedRDFIterator<Triple>();
 		PipedRDFStream<Triple> rdfStream = new PipedTriplesStream(triples);

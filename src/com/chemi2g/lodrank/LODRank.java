@@ -17,6 +17,7 @@ import java.util.HashSet;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.apache.jena.atlas.web.HttpException;
 import org.apache.jena.riot.RiotException;
 
 /**
@@ -152,6 +153,10 @@ public class LODRank {
 							System.err.println(new Timestamp(date.getTime()) + " Resuming the process...");
 						} catch (IOException e) {
 							System.err.println(new Timestamp(date.getTime()) + " IOException while processing dataset " + urls[1]);
+							e.printStackTrace();
+							System.err.println(new Timestamp(date.getTime()) + " Resuming the process...");
+						} catch (HttpException e) {
+							System.err.println(new Timestamp(date.getTime()) + " HttpException while processing dataset " + urls[1]);
 							e.printStackTrace();
 							System.err.println(new Timestamp(date.getTime()) + " Resuming the process...");
 						}
