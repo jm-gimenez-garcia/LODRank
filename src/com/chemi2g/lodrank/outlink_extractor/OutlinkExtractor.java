@@ -1,4 +1,4 @@
-package com.chemi2g.lodrank;
+package com.chemi2g.lodrank.outlink_extractor;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;

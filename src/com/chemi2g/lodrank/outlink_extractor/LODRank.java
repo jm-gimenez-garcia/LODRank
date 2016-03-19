@@ -1,11 +1,10 @@
 /**
  * 
  */
-package com.chemi2g.lodrank;
+package com.chemi2g.lodrank.outlink_extractor;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -53,7 +52,6 @@ public class LODRank {
 
 	void readPartialProcessing(String path) {
 		BufferedReader reader = null;
-		File file;
 		String line;
 		// File fileDatasets = new File(path + "/" + PROCESSED_DATASETS_FILE);
 		try {

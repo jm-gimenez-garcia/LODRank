@@ -1,4 +1,4 @@
-package com.chemi2g.lodrank;
+package com.chemi2g.lodrank.outlink_extractor;
 
 public class MultipleResultsException extends Exception {
 
