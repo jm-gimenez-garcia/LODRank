@@ -31,21 +31,38 @@ import org.apache.jena.riot.lang.PipedTriplesStream;
 
 public class OutlinkExtractor {
 
-	static final String	QUADS_END						= ".nq.gz";
-	static final String	LODLAUNDROMAT_ENDPOINT			= "http://sparql.backend.lodlaundromat.org";
-	static final String	DATASET_URI_QUERY				= "SELECT ?url WHERE {<%s> <http://lodlaundromat.org/ontology/url> ?url}";
-	static final String	DATASET_URI_QUERY_WITH_ARCHIVE	= "SELECT ?url WHERE {?archive <http://lodlaundromat.org/ontology/containsEntry> <%s> . ?archive <http://lodlaundromat.org/ontology/url> ?url}";
+	static final String		QUADS_END						= ".nq.gz";
+	static final String		LODLAUNDROMAT_ENDPOINT			= "http://sparql.backend.lodlaundromat.org";
+	static final String		DATASET_URI_QUERY				= "SELECT ?url WHERE {<%s> <http://lodlaundromat.org/ontology/url> ?url}";
+	static final String		DATASET_URI_QUERY_WITH_ARCHIVE	= "SELECT ?url WHERE {?archive <http://lodlaundromat.org/ontology/containsEntry> <%s> . ?archive <http://lodlaundromat.org/ontology/url> ?url}";
 
-	Date				date							= new Date();
+	static final boolean	PROCESS_SUBJECTS_DEFAULT		= true;
+	static final boolean	PROCESS_PREDICATES_DEFAULT		= false;
+	static final boolean	PROCESS_OBJECTS_DEFAULT			= true;
+	static final long		NUM_TRIPLES_DEFAULT				= 0;
 
-	long				numTriples;
+	Date					date							= new Date();
 
-	public OutlinkExtractor(long numTriples) {
+	boolean					processSubjects, processPredicates, processObjects;
+	long					numTriples;
+
+	public OutlinkExtractor(boolean processSubjects, boolean processPredicates, boolean processObjects, long numTriples) {
+		this.processSubjects = processSubjects;
+		this.processPredicates = processPredicates;
+		this.processObjects = processObjects;
 		this.numTriples = numTriples;
 	}
 
+	public OutlinkExtractor(boolean processSubjects, boolean processPredicates, boolean processObjects) {
+		this(processSubjects, processPredicates, processObjects, NUM_TRIPLES_DEFAULT);
+	}
+
+	public OutlinkExtractor(long numTriples) {
+		this(PROCESS_SUBJECTS_DEFAULT, PROCESS_PREDICATES_DEFAULT, PROCESS_OBJECTS_DEFAULT, numTriples);
+	}
+
 	public OutlinkExtractor() {
-		this(0);
+		this(PROCESS_SUBJECTS_DEFAULT, PROCESS_PREDICATES_DEFAULT, PROCESS_OBJECTS_DEFAULT, NUM_TRIPLES_DEFAULT);
 	}
 
 	URL query(String queryString, String endpoint) throws MalformedURLException {
@@ -109,13 +126,19 @@ public class OutlinkExtractor {
 			while (triples.hasNext()) {
 				datasetTriples++;
 				triple = triples.next();
-				if (triple.getSubject().isURI()) {
+				if (this.processSubjects && triple.getSubject().isURI()) {
 					resourcePLD = pldComparator.getPLD(triple.getSubject().toString());
 					if (resourcePLD != null && !datasetPLD.equals(resourcePLD)) {
 						outlinks.add(resourcePLD);
 					}
 				}
-				if (triple.getObject().isURI()) {
+				if (this.processPredicates && triple.getPredicate().isURI()) {
+					resourcePLD = pldComparator.getPLD(triple.getPredicate().toString());
+					if (resourcePLD != null && !datasetPLD.equals(resourcePLD)) {
+						outlinks.add(resourcePLD);
+					}
+				}
+				if (this.processObjects && triple.getObject().isURI()) {
 					resourcePLD = pldComparator.getPLD(triple.getObject().toString());
 					if (resourcePLD != null && !datasetPLD.equals(resourcePLD)) {
 						outlinks.add(resourcePLD);
