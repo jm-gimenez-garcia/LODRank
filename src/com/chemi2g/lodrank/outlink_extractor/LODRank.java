@@ -98,7 +98,7 @@ public class LODRank {
 	}
 
 	void run(String path) {
-		outlinkExtractor = new OutlinkExtractor(numTriples);
+		outlinkExtractor = new OutlinkExtractor(true, true, true, numTriples);
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter processedDatasetsWriter;
 		String line;
