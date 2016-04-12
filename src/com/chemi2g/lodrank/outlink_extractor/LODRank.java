@@ -25,21 +25,18 @@ import org.apache.jena.riot.RiotException;
  */
 public class LODRank {
 
-	static final String	DEFAULT_CONFIG_PATH		= "res";
-	static final String	PROCESSED_TRIPLES_FILE	= "processedTriples.aux";
-	static final String	PROCESSED_DATASETS_FILE	= "processedDatasets.aux";
+	HashSet<String>			processedDatasets;
+	int						numDatasets;
+	long					numTriples;
+	int						step	= 1, start = 1;
 
-	HashSet<String>		processedDatasets;
-	int					numDatasets;
-	long				numTriples;
-	int					step					= 1, start = 1;
-
-	OutlinkExtractor	outlinkExtractor;
-	Date				date					= new Date();
+	OutlinkConfiguration	conf	= OutlinkConfiguration.getInstance();
+	OutlinkExtractor		outlinkExtractor;
+	Date					date	= new Date();
 
 	public static void main(String[] args) {
 		LODRank lodrank = new LODRank();
-		lodrank.readPartialProcessing(DEFAULT_CONFIG_PATH);
+		lodrank.readPartialProcessing(OutlinkConfiguration.DEFAULT_CONFIG_FOLDER);
 		if (args.length == 1) {
 			lodrank.setStep(Integer.parseInt(args[0]));
 			lodrank.setStart(Integer.parseInt(args[0]));
@@ -47,7 +44,7 @@ public class LODRank {
 			lodrank.setStep(Integer.parseInt(args[0]));
 			lodrank.setStart(Integer.parseInt(args[1]));
 		}
-		lodrank.run(DEFAULT_CONFIG_PATH);
+		lodrank.run(OutlinkConfiguration.DEFAULT_CONFIG_FOLDER);
 	}
 
 	void readPartialProcessing(String path) {
@@ -57,7 +54,7 @@ public class LODRank {
 		try {
 			try {
 				// Read number of triples
-				reader = new BufferedReader(new FileReader(path + "/" + PROCESSED_TRIPLES_FILE));
+				reader = new BufferedReader(new FileReader(path + "/" + OutlinkConfiguration.PROCESSED_TRIPLES_FILE));
 				numTriples = Long.parseLong(reader.readLine());
 				reader.close();
 			} catch (NumberFormatException e) {
@@ -67,7 +64,7 @@ public class LODRank {
 			}
 			// Read already processed datasets
 			processedDatasets = new HashSet<>();
-			reader = new BufferedReader(new FileReader(path + "/" + PROCESSED_DATASETS_FILE));
+			reader = new BufferedReader(new FileReader(path + "/" + OutlinkConfiguration.PROCESSED_DATASETS_FILE));
 			while ((line = reader.readLine()) != null) {
 				processedDatasets.add(line);
 				numDatasets++;
@@ -98,7 +95,7 @@ public class LODRank {
 	}
 
 	void run(String path) {
-		outlinkExtractor = new OutlinkExtractor(true, true, true, numTriples);
+		outlinkExtractor = new OutlinkExtractor(conf.processSubjects(), conf.processPredicates(), conf.processObjects(), numTriples);
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter processedDatasetsWriter;
 		String line;
@@ -108,13 +105,13 @@ public class LODRank {
 		}
 
 		try {
-			processedDatasetsWriter = new BufferedWriter(new FileWriter(path + "/" + PROCESSED_DATASETS_FILE, true));
+			processedDatasetsWriter = new BufferedWriter(new FileWriter(path + "/" + OutlinkConfiguration.PROCESSED_DATASETS_FILE, true));
 
 			Runtime.getRuntime().addShutdownHook(new Thread() {
 				public void run() {
 					FileWriter numTriplesWriter = null;
 					try {
-						numTriplesWriter = new FileWriter(path + "/" + PROCESSED_TRIPLES_FILE);
+						numTriplesWriter = new FileWriter(path + "/" + OutlinkConfiguration.PROCESSED_TRIPLES_FILE);
 						numTriplesWriter.write(Long.toString(outlinkExtractor.getNumTriples()) + "\n");
 						numTriplesWriter.flush();
 						processedDatasetsWriter.flush();

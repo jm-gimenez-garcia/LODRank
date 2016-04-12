@@ -12,10 +12,9 @@ import java.util.zip.GZIPOutputStream;
 
 public class OutlinkWriter implements Runnable {
 
-	static final String	DEFAULT_OUTPUT_FOLDER	= "output";
-	static final String	GZIP_EXTENSION			= ".gz";
+	static final String	GZIP_EXTENSION	= ".gz";
 
-	Date				date					= new Date();
+	Date				date			= new Date();
 
 	String				datasetPLD;
 	Set<String>			outlinks;
@@ -56,6 +55,6 @@ public class OutlinkWriter implements Runnable {
 	}
 
 	public void run() {
-		run(DEFAULT_OUTPUT_FOLDER);
+		run(OutlinkConfiguration.DEFAULT_OUTPUT_FOLDER);
 	}
 }

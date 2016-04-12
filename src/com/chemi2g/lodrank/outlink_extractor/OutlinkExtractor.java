@@ -31,20 +31,16 @@ import org.apache.jena.riot.lang.PipedTriplesStream;
 
 public class OutlinkExtractor {
 
-	static final String		QUADS_END						= ".nq.gz";
-	static final String		LODLAUNDROMAT_ENDPOINT			= "http://sparql.backend.lodlaundromat.org";
-	static final String		DATASET_URI_QUERY				= "SELECT ?url WHERE {<%s> <http://lodlaundromat.org/ontology/url> ?url}";
-	static final String		DATASET_URI_QUERY_WITH_ARCHIVE	= "SELECT ?url WHERE {?archive <http://lodlaundromat.org/ontology/containsEntry> <%s> . ?archive <http://lodlaundromat.org/ontology/url> ?url}";
+	static final String	QUADS_END						= ".nq.gz";
+	static final String	LODLAUNDROMAT_ENDPOINT			= "http://sparql.backend.lodlaundromat.org";
+	static final String	DATASET_URI_QUERY				= "SELECT ?url WHERE {<%s> <http://lodlaundromat.org/ontology/url> ?url}";
+	static final String	DATASET_URI_QUERY_WITH_ARCHIVE	= "SELECT ?url WHERE {?archive <http://lodlaundromat.org/ontology/containsEntry> <%s> . ?archive <http://lodlaundromat.org/ontology/url> ?url}";
+	static final long	ZERO_TRIPLES					= 0;
 
-	static final boolean	PROCESS_SUBJECTS_DEFAULT		= true;
-	static final boolean	PROCESS_PREDICATES_DEFAULT		= false;
-	static final boolean	PROCESS_OBJECTS_DEFAULT			= true;
-	static final long		NUM_TRIPLES_DEFAULT				= 0;
+	Date				date							= new Date();
 
-	Date					date							= new Date();
-
-	boolean					processSubjects, processPredicates, processObjects;
-	long					numTriples;
+	boolean				processSubjects, processPredicates, processObjects;
+	long				numTriples;
 
 	public OutlinkExtractor(boolean processSubjects, boolean processPredicates, boolean processObjects, long numTriples) {
 		this.processSubjects = processSubjects;
@@ -54,15 +50,15 @@ public class OutlinkExtractor {
 	}
 
 	public OutlinkExtractor(boolean processSubjects, boolean processPredicates, boolean processObjects) {
-		this(processSubjects, processPredicates, processObjects, NUM_TRIPLES_DEFAULT);
+		this(processSubjects, processPredicates, processObjects, ZERO_TRIPLES);
 	}
 
 	public OutlinkExtractor(long numTriples) {
-		this(PROCESS_SUBJECTS_DEFAULT, PROCESS_PREDICATES_DEFAULT, PROCESS_OBJECTS_DEFAULT, numTriples);
+		this(OutlinkConfiguration.PROCESS_SUBJECTS_DEFAULT, OutlinkConfiguration.PROCESS_PREDICATES_DEFAULT, OutlinkConfiguration.PROCESS_OBJECTS_DEFAULT, numTriples);
 	}
 
 	public OutlinkExtractor() {
-		this(PROCESS_SUBJECTS_DEFAULT, PROCESS_PREDICATES_DEFAULT, PROCESS_OBJECTS_DEFAULT, NUM_TRIPLES_DEFAULT);
+		this(OutlinkConfiguration.PROCESS_SUBJECTS_DEFAULT, OutlinkConfiguration.PROCESS_PREDICATES_DEFAULT, OutlinkConfiguration.PROCESS_OBJECTS_DEFAULT, ZERO_TRIPLES);
 	}
 
 	URL query(String queryString, String endpoint) throws MalformedURLException {
