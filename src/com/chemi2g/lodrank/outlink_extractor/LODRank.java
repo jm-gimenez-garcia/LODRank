@@ -28,22 +28,18 @@ public class LODRank {
 	HashSet<String>			processedDatasets;
 	int						numDatasets;
 	long					numTriples;
-	int						step	= 1, start = 1;
 
-	OutlinkConfiguration	conf	= OutlinkConfiguration.getInstance();
+	OutlinkConfiguration	conf;
 	OutlinkExtractor		outlinkExtractor;
 	Date					date	= new Date();
 
+	private LODRank(String[] args) {
+		conf = OutlinkConfiguration.newInstance(args);
+	}
+
 	public static void main(String[] args) {
-		LODRank lodrank = new LODRank();
+		LODRank lodrank = new LODRank(args);
 		lodrank.readPartialProcessing(OutlinkConfiguration.DEFAULT_CONFIG_FOLDER);
-		if (args.length == 1) {
-			lodrank.setStep(Integer.parseInt(args[0]));
-			lodrank.setStart(Integer.parseInt(args[0]));
-		} else if (args.length >= 2) {
-			lodrank.setStep(Integer.parseInt(args[0]));
-			lodrank.setStart(Integer.parseInt(args[1]));
-		}
 		lodrank.run(OutlinkConfiguration.DEFAULT_CONFIG_FOLDER);
 	}
 
@@ -130,7 +126,7 @@ public class LODRank {
 			});
 
 			while ((line = reader.readLine()) != null) {
-				if (((++numLine) - getStart()) % getStep() == 0) {
+				if (((++numLine) - conf.getStart()) % conf.getStep() == 0) {
 					String[] urls = line.split(" ");
 					if (!processedDatasets.contains(urls[1])) {
 						Entry<String, Set<String>> outlinks;
@@ -168,21 +164,4 @@ public class LODRank {
 			e.printStackTrace();
 		}
 	}
-
-	public int getStep() {
-		return step;
-	}
-
-	public int getStart() {
-		return start;
-	}
-
-	public void setStep(int step) {
-		this.step = step;
-	}
-
-	public void setStart(int start) {
-		this.start = start;
-	}
-
 }
