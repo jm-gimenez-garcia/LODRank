@@ -35,17 +35,30 @@ public class OutlinkExtractor {
 	static final String	LODLAUNDROMAT_ENDPOINT			= "http://sparql.backend.lodlaundromat.org";
 	static final String	DATASET_URI_QUERY				= "SELECT ?url WHERE {<%s> <http://lodlaundromat.org/ontology/url> ?url}";
 	static final String	DATASET_URI_QUERY_WITH_ARCHIVE	= "SELECT ?url WHERE {?archive <http://lodlaundromat.org/ontology/containsEntry> <%s> . ?archive <http://lodlaundromat.org/ontology/url> ?url}";
+	static final long	ZERO_TRIPLES					= 0;
 
 	Date				date							= new Date();
 
+	boolean				processSubjects, processPredicates, processObjects;
 	long				numTriples;
 
-	public OutlinkExtractor(long numTriples) {
+	public OutlinkExtractor(boolean processSubjects, boolean processPredicates, boolean processObjects, long numTriples) {
+		this.processSubjects = processSubjects;
+		this.processPredicates = processPredicates;
+		this.processObjects = processObjects;
 		this.numTriples = numTriples;
 	}
 
+	public OutlinkExtractor(boolean processSubjects, boolean processPredicates, boolean processObjects) {
+		this(processSubjects, processPredicates, processObjects, ZERO_TRIPLES);
+	}
+
+	public OutlinkExtractor(long numTriples) {
+		this(OutlinkConfiguration.PROCESS_SUBJECTS_DEFAULT, OutlinkConfiguration.PROCESS_PREDICATES_DEFAULT, OutlinkConfiguration.PROCESS_OBJECTS_DEFAULT, numTriples);
+	}
+
 	public OutlinkExtractor() {
-		this(0);
+		this(OutlinkConfiguration.PROCESS_SUBJECTS_DEFAULT, OutlinkConfiguration.PROCESS_PREDICATES_DEFAULT, OutlinkConfiguration.PROCESS_OBJECTS_DEFAULT, ZERO_TRIPLES);
 	}
 
 	URL query(String queryString, String endpoint) throws MalformedURLException {
@@ -109,13 +122,19 @@ public class OutlinkExtractor {
 			while (triples.hasNext()) {
 				datasetTriples++;
 				triple = triples.next();
-				if (triple.getSubject().isURI()) {
+				if (this.processSubjects && triple.getSubject().isURI()) {
 					resourcePLD = pldComparator.getPLD(triple.getSubject().toString());
 					if (resourcePLD != null && !datasetPLD.equals(resourcePLD)) {
 						outlinks.add(resourcePLD);
 					}
 				}
-				if (triple.getObject().isURI()) {
+				if (this.processPredicates && triple.getPredicate().isURI()) {
+					resourcePLD = pldComparator.getPLD(triple.getPredicate().toString());
+					if (resourcePLD != null && !datasetPLD.equals(resourcePLD)) {
+						outlinks.add(resourcePLD);
+					}
+				}
+				if (this.processObjects && triple.getObject().isURI()) {
 					resourcePLD = pldComparator.getPLD(triple.getObject().toString());
 					if (resourcePLD != null && !datasetPLD.equals(resourcePLD)) {
 						outlinks.add(resourcePLD);
