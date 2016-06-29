@@ -1,0 +1,1773 @@
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset bluk-bnb
+2016-04-25 09:53:05.885 Finished processing bluk-bnb. Dataset triples: 45. Total triples: 45
+Reading Dumps Dictionary from res/download_dict.csv
+2016-04-25 09:53:15.196 Writing dataset bluk-bnb to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/bluk-bnb.gz
+2016-04-25 09:53:15.196 Finished writing dataset. Outlinks written: 1
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset enakting-co2emission
+2016-04-25 09:53:05.885 Finished processing enakting-co2emission. Dataset triples: 5. Total triples: 50
+2016-04-25 09:53:15.461 No outlinks for dataset enakting-co2emission
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset core
+2016-04-25 09:53:05.885 Finished processing core. Dataset triples: 31. Total triples: 81
+Reading Dumps Dictionary from res/download_dict.csv
+2016-04-25 09:53:17.417 Writing dataset core to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/core.gz
+2016-04-25 09:53:17.417 Finished writing dataset. Outlinks written: 1
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset core
+2016-04-25 09:53:05.885 Finished processing core. Dataset triples: 3306719. Total triples: 3306800
+2016-04-25 09:57:20.84 No outlinks for dataset core
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset core
+2016-04-25 09:53:05.885 Finished processing core. Dataset triples: 4. Total triples: 3306804
+2016-04-25 09:57:21.112 No outlinks for dataset core
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset core
+2016-04-25 09:53:05.885 Finished processing core. Dataset triples: 46. Total triples: 3306850
+2016-04-25 09:57:21.287 No outlinks for dataset core
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset enakting-crime
+2016-04-25 09:53:05.885 Finished processing enakting-crime. Dataset triples: 2. Total triples: 3306852
+2016-04-25 09:57:21.457 No outlinks for dataset enakting-crime
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset rkb-explorer-crime
+2016-04-25 09:53:05.885 Finished processing rkb-explorer-crime. Dataset triples: 17. Total triples: 3306869
+2016-04-25 09:57:21.66 No outlinks for dataset rkb-explorer-crime
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset rkb-explorer-crime
+2016-04-25 09:53:05.885 Finished processing rkb-explorer-crime. Dataset triples: 16. Total triples: 3306885
+2016-04-25 09:57:21.881 No outlinks for dataset rkb-explorer-crime
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset iptc-newscodes
+2016-04-25 09:53:05.885 Finished processing iptc-newscodes. Dataset triples: 1. Total triples: 3306886
+2016-04-25 09:57:22.056 No outlinks for dataset iptc-newscodes
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset eagle-i-dartmouth
+2016-04-25 09:53:05.885 Finished processing eagle-i-dartmouth. Dataset triples: 289578. Total triples: 3596464
+2016-04-25 09:57:42.674 No outlinks for dataset eagle-i-dartmouth
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset europeana-lod-v1
+2016-04-25 09:53:05.885 Finished processing europeana-lod-v1. Dataset triples: 25300. Total triples: 3621764
+Reading Dumps Dictionary from res/download_dict.csv
+2016-04-25 09:57:44.558 Writing dataset europeana-lod-v1 to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/europeana-lod-v1.gz
+2016-04-25 09:57:44.558 Finished writing dataset. Outlinks written: 1
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset europeana-lod-v1
+2016-04-25 09:53:05.885 Finished processing europeana-lod-v1. Dataset triples: 41591. Total triples: 3663355
+Reading Dumps Dictionary from res/download_dict.csv
+2016-04-25 09:57:47.633 Writing dataset europeana-lod-v1 to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/europeana-lod-v1.gz
+2016-04-25 09:57:47.633 Finished writing dataset. Outlinks written: 1
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset europeana-lod-v1
+2016-04-25 09:53:05.885 Finished processing europeana-lod-v1. Dataset triples: 6919. Total triples: 3670274
+Reading Dumps Dictionary from res/download_dict.csv
+2016-04-25 09:57:48.195 Writing dataset europeana-lod-v1 to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/europeana-lod-v1.gz
+2016-04-25 09:57:48.195 Finished writing dataset. Outlinks written: 1
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset europeana-lod-v1
+2016-04-25 09:53:05.885 Finished processing europeana-lod-v1. Dataset triples: 19992. Total triples: 3690266
+Reading Dumps Dictionary from res/download_dict.csv
+2016-04-25 09:57:49.569 Writing dataset europeana-lod-v1 to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/europeana-lod-v1.gz
+2016-04-25 09:57:49.569 Finished writing dataset. Outlinks written: 1
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset europeana-lod-v1
+2016-04-25 09:53:05.885 Finished processing europeana-lod-v1. Dataset triples: 4970464. Total triples: 8660730
+Reading Dumps Dictionary from res/download_dict.csv
+2016-04-25 10:03:26.231 Writing dataset europeana-lod-v1 to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/europeana-lod-v1.gz
+2016-04-25 10:03:26.231 Finished writing dataset. Outlinks written: 1
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset europeana-lod-v1
+2016-04-25 09:53:05.885 Finished processing europeana-lod-v1. Dataset triples: 519877. Total triples: 9180607
+Reading Dumps Dictionary from res/download_dict.csv
+2016-04-25 10:04:01.977 Writing dataset europeana-lod-v1 to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/europeana-lod-v1.gz
+2016-04-25 10:04:01.977 Finished writing dataset. Outlinks written: 1
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset europeana-lod-v1
+2016-04-25 09:53:05.885 Finished processing europeana-lod-v1. Dataset triples: 797173. Total triples: 9977780
+Reading Dumps Dictionary from res/download_dict.csv
+2016-04-25 10:04:55.401 Writing dataset europeana-lod-v1 to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/europeana-lod-v1.gz
+2016-04-25 10:04:55.401 Finished writing dataset. Outlinks written: 1
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset norwegian-geo-divisions
+2016-04-25 09:53:05.885 Finished processing norwegian-geo-divisions. Dataset triples: 172. Total triples: 9977952
+Reading Dumps Dictionary from res/download_dict.csv
+2016-04-25 10:04:55.679 Writing dataset norwegian-geo-divisions to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/norwegian-geo-divisions.gz
+2016-04-25 10:04:55.679 Finished writing dataset. Outlinks written: 1
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset nobelprizes
+2016-04-25 09:53:05.885 Finished processing nobelprizes. Dataset triples: 152. Total triples: 9978104
+2016-04-25 10:04:55.9 No outlinks for dataset nobelprizes
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset nobelprizes
+2016-04-25 09:53:05.885 Finished processing nobelprizes. Dataset triples: 29. Total triples: 9978133
+Reading Dumps Dictionary from res/download_dict.csv
+2016-04-25 10:04:56.105 Writing dataset nobelprizes to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/nobelprizes.gz
+2016-04-25 10:04:56.105 Finished writing dataset. Outlinks written: 1
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset nytimes-linked-open-data
+2016-04-25 09:53:05.885 Finished processing nytimes-linked-open-data. Dataset triples: 91405. Total triples: 10069538
+Reading Dumps Dictionary from res/download_dict.csv
+2016-04-25 10:05:02.272 Writing dataset nytimes-linked-open-data to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/nytimes-linked-open-data.gz
+2016-04-25 10:05:02.272 Finished writing dataset. Outlinks written: 3
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset oceandrilling-ldeo
+2016-04-25 09:53:05.885 Finished processing oceandrilling-ldeo. Dataset triples: 2. Total triples: 10069540
+2016-04-25 10:05:02.495 No outlinks for dataset oceandrilling-ldeo
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset oceandrilling-janusamp
+2016-04-25 09:53:05.885 Finished processing oceandrilling-janusamp. Dataset triples: 2. Total triples: 10069542
+2016-04-25 10:05:02.718 No outlinks for dataset oceandrilling-janusamp
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset oceandrilling-codices
+2016-04-25 09:53:05.885 Finished processing oceandrilling-codices. Dataset triples: 28. Total triples: 10069570
+Reading Dumps Dictionary from res/download_dict.csv
+2016-04-25 10:05:02.895 Writing dataset oceandrilling-codices to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/oceandrilling-codices.gz
+2016-04-25 10:05:02.895 Finished writing dataset. Outlinks written: 1
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset data-open-ac-uk
+2016-04-25 09:53:05.885 Finished processing data-open-ac-uk. Dataset triples: 93. Total triples: 10069663
+2016-04-25 10:05:03.131 No outlinks for dataset data-open-ac-uk
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset organic-edunet
+2016-04-25 09:53:05.885 Finished processing organic-edunet. Dataset triples: 1144641. Total triples: 11214304
+Reading Dumps Dictionary from res/download_dict.csv
+2016-04-25 10:06:18.164 Writing dataset organic-edunet to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/organic-edunet.gz
+2016-04-25 10:06:18.164 Finished writing dataset. Outlinks written: 2
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset clean-energy-data-reegle
+2016-04-25 09:53:05.885 Finished processing clean-energy-data-reegle. Dataset triples: 17. Total triples: 11214321
+2016-04-25 10:06:18.436 No outlinks for dataset clean-energy-data-reegle
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset clean-energy-data-reegle
+2016-04-25 09:53:05.885 Finished processing clean-energy-data-reegle. Dataset triples: 17. Total triples: 11214338
+2016-04-25 10:06:18.645 No outlinks for dataset clean-energy-data-reegle
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset clean-energy-data-reegle
+2016-04-25 09:53:05.885 Finished processing clean-energy-data-reegle. Dataset triples: 17. Total triples: 11214355
+2016-04-25 10:06:18.836 No outlinks for dataset clean-energy-data-reegle
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset temple-ov-thee-lemur-datasets
+2016-04-25 09:53:05.885 Finished processing temple-ov-thee-lemur-datasets. Dataset triples: 101. Total triples: 11214456
+2016-04-25 10:06:19.026 No outlinks for dataset temple-ov-thee-lemur-datasets
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset temple-ov-thee-lemur-datasets
+2016-04-25 09:53:05.885 Finished processing temple-ov-thee-lemur-datasets. Dataset triples: 1102. Total triples: 11215558
+2016-04-25 10:06:19.271 No outlinks for dataset temple-ov-thee-lemur-datasets
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset temple-ov-thee-lemur-datasets
+2016-04-25 09:53:05.885 Finished processing temple-ov-thee-lemur-datasets. Dataset triples: 12. Total triples: 11215570
+2016-04-25 10:06:19.45 No outlinks for dataset temple-ov-thee-lemur-datasets
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset temple-ov-thee-lemur-datasets
+2016-04-25 09:53:05.885 Finished processing temple-ov-thee-lemur-datasets. Dataset triples: 20. Total triples: 11215590
+2016-04-25 10:06:19.66 No outlinks for dataset temple-ov-thee-lemur-datasets
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset umthes
+2016-04-25 09:53:05.885 Finished processing umthes. Dataset triples: 37. Total triples: 11215627
+Reading Dumps Dictionary from res/download_dict.csv
+2016-04-25 10:06:19.83 Writing dataset umthes to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/umthes.gz
+2016-04-25 10:06:19.83 Finished writing dataset. Outlinks written: 1
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset linked-edgar
+2016-04-25 09:53:05.885 Finished processing linked-edgar. Dataset triples: 9147. Total triples: 11224774
+2016-04-25 10:06:20.645 No outlinks for dataset linked-edgar
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset education-openuplabs
+2016-04-25 09:53:05.885 Finished processing education-openuplabs. Dataset triples: 169. Total triples: 11224943
+2016-04-25 10:06:20.849 No outlinks for dataset education-openuplabs
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia-el
+2016-04-25 09:53:05.885 Finished processing dbpedia-el. Dataset triples: 119. Total triples: 11225062
+2016-04-25 10:06:21.042 Writing dataset dbpedia-el to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/dbpedia-el.gz
+2016-04-25 10:06:21.042 Finished writing dataset. Outlinks written: 5
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset open-energy-info-wiki
+2016-04-25 09:53:05.885 Finished processing open-energy-info-wiki. Dataset triples: 70. Total triples: 11225132
+2016-04-25 10:06:21.23 No outlinks for dataset open-energy-info-wiki
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset environment-agency-bathing-water-quality
+2016-04-25 09:53:05.885 Finished processing environment-agency-bathing-water-quality. Dataset triples: 24. Total triples: 11225156
+2016-04-25 10:06:21.413 No outlinks for dataset environment-agency-bathing-water-quality
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset environment-agency-bathing-water-quality
+2016-04-25 09:53:05.885 Finished processing environment-agency-bathing-water-quality. Dataset triples: 256. Total triples: 11225412
+2016-04-25 10:06:21.64 No outlinks for dataset environment-agency-bathing-water-quality
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset environment-agency-bathing-water-quality
+2016-04-25 09:53:05.885 Finished processing environment-agency-bathing-water-quality. Dataset triples: 246. Total triples: 11225658
+2016-04-25 10:06:21.839 No outlinks for dataset environment-agency-bathing-water-quality
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset environment-agency-bathing-water-quality
+2016-04-25 09:53:05.885 Finished processing environment-agency-bathing-water-quality. Dataset triples: 674. Total triples: 11226332
+Reading Dumps Dictionary from res/download_dict.csv
+2016-04-25 10:06:22.069 Writing dataset environment-agency-bathing-water-quality to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/environment-agency-bathing-water-quality.gz
+2016-04-25 10:06:22.069 Finished writing dataset. Outlinks written: 1
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset southampton-ecs-eprints
+2016-04-25 09:53:05.885 Finished processing southampton-ecs-eprints. Dataset triples: 955112. Total triples: 12181444
+2016-04-25 10:07:29.669 No outlinks for dataset southampton-ecs-eprints
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset eunis
+2016-04-25 09:53:05.885 Finished processing eunis. Dataset triples: 14. Total triples: 12181458
+2016-04-25 10:07:29.937 No outlinks for dataset eunis
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset eunis
+2016-04-25 09:53:05.885 Finished processing eunis. Dataset triples: 19. Total triples: 12181477
+2016-04-25 10:07:30.119 No outlinks for dataset eunis
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset eunis
+2016-04-25 09:53:05.885 Finished processing eunis. Dataset triples: 173. Total triples: 12181650
+Reading Dumps Dictionary from res/download_dict.csv
+2016-04-25 10:07:30.294 Writing dataset eunis to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/eunis.gz
+2016-04-25 10:07:30.294 Finished writing dataset. Outlinks written: 3
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset fao-linked-data
+2016-04-25 09:53:05.885 Finished processing fao-linked-data. Dataset triples: 2542. Total triples: 12184192
+Reading Dumps Dictionary from res/download_dict.csv
+2016-04-25 10:07:30.604 Writing dataset fao-linked-data to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/fao-linked-data.gz
+2016-04-25 10:07:30.604 Finished writing dataset. Outlinks written: 8
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia-nl
+2016-04-25 09:53:05.885 Finished processing dbpedia-nl. Dataset triples: 4772. Total triples: 12188964
+Reading Dumps Dictionary from res/download_dict.csv
+2016-04-25 10:07:31.053 Writing dataset dbpedia-nl to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/dbpedia-nl.gz
+2016-04-25 10:07:31.053 Finished writing dataset. Outlinks written: 10
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia-nl
+2016-04-25 09:53:05.885 Finished processing dbpedia-nl. Dataset triples: 3482. Total triples: 12192446
+Reading Dumps Dictionary from res/download_dict.csv
+2016-04-25 10:07:31.485 Writing dataset dbpedia-nl to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/dbpedia-nl.gz
+2016-04-25 10:07:31.485 Finished writing dataset. Outlinks written: 9
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia-nl
+2016-04-25 09:53:05.885 Finished processing dbpedia-nl. Dataset triples: 4772. Total triples: 12197218
+Reading Dumps Dictionary from res/download_dict.csv
+2016-04-25 10:07:31.984 Writing dataset dbpedia-nl to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/dbpedia-nl.gz
+2016-04-25 10:07:31.984 Finished writing dataset. Outlinks written: 10
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset linked-nuts
+2016-04-25 09:53:05.885 Finished processing linked-nuts. Dataset triples: 5. Total triples: 12197223
+2016-04-25 10:07:32.169 No outlinks for dataset linked-nuts
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset linked-nuts
+2016-04-25 09:53:05.885 Finished processing linked-nuts. Dataset triples: 59. Total triples: 12197282
+Reading Dumps Dictionary from res/download_dict.csv
+2016-04-25 10:07:32.601 Writing dataset linked-nuts to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/linked-nuts.gz
+2016-04-25 10:07:32.601 Finished writing dataset. Outlinks written: 1
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset twc-hub
+2016-04-25 09:53:05.885 Finished processing twc-hub. Dataset triples: 268. Total triples: 12197550
+2016-04-25 10:07:32.812 No outlinks for dataset twc-hub
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset oecd-linked-data
+2016-04-25 09:53:05.885 Finished processing oecd-linked-data. Dataset triples: 124. Total triples: 12197674
+2016-04-25 10:07:32.979 No outlinks for dataset oecd-linked-data
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset eagle-i-ohsu
+2016-04-25 09:53:05.885 Finished processing eagle-i-ohsu. Dataset triples: 49. Total triples: 12197723
+2016-04-25 10:07:33.162 No outlinks for dataset eagle-i-ohsu
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset eagle-i-ohsu
+2016-04-25 09:53:05.885 Finished processing eagle-i-ohsu. Dataset triples: 48627. Total triples: 12246350
+2016-04-25 10:07:36.558 No outlinks for dataset eagle-i-ohsu
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset finnish-municipalities
+2016-04-25 09:53:05.885 Finished processing finnish-municipalities. Dataset triples: 11380. Total triples: 12257730
+Reading Dumps Dictionary from res/download_dict.csv
+2016-04-25 10:07:37.467 Writing dataset finnish-municipalities to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/finnish-municipalities.gz
+2016-04-25 10:07:37.467 Finished writing dataset. Outlinks written: 1
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset iso-3166-2-data
+2016-04-25 09:53:05.885 Finished processing iso-3166-2-data. Dataset triples: 12001. Total triples: 12269731
+Reading Dumps Dictionary from res/download_dict.csv
+2016-04-25 10:07:38.273 Writing dataset iso-3166-2-data to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/iso-3166-2-data.gz
+2016-04-25 10:07:38.273 Finished writing dataset. Outlinks written: 1
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset iso-3166-2-data
+2016-04-25 09:53:05.885 Finished processing iso-3166-2-data. Dataset triples: 11. Total triples: 12269742
+2016-04-25 10:07:38.448 No outlinks for dataset iso-3166-2-data
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset traditional-korean-medicine
+2016-04-25 09:53:05.885 Finished processing traditional-korean-medicine. Dataset triples: 131. Total triples: 12269873
+2016-04-25 10:07:38.649 No outlinks for dataset traditional-korean-medicine
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset traditional-korean-medicine
+2016-04-25 09:53:05.885 Finished processing traditional-korean-medicine. Dataset triples: 51932. Total triples: 12321805
+2016-04-25 10:07:42.086 No outlinks for dataset traditional-korean-medicine
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset opencorporates
+2016-04-25 09:53:05.885 Finished processing opencorporates. Dataset triples: 55. Total triples: 12321860
+2016-04-25 10:07:42.537 No outlinks for dataset opencorporates
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset euskadi-farmacias
+2016-04-25 09:53:05.885 Finished processing euskadi-farmacias. Dataset triples: 44. Total triples: 12321904
+Reading Dumps Dictionary from res/download_dict.csv
+2016-04-25 10:07:44.861 Writing dataset euskadi-farmacias to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/euskadi-farmacias.gz
+2016-04-25 10:07:44.861 Finished writing dataset. Outlinks written: 2
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset open-data-euskadi
+2016-04-25 09:53:05.885 Finished processing open-data-euskadi. Dataset triples: 47. Total triples: 12321951
+Reading Dumps Dictionary from res/download_dict.csv
+2016-04-25 10:07:49.362 Writing dataset open-data-euskadi to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/open-data-euskadi.gz
+2016-04-25 10:07:49.362 Finished writing dataset. Outlinks written: 2
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset openlylocal
+2016-04-25 09:53:05.885 Finished processing openlylocal. Dataset triples: 234. Total triples: 12322185
+Reading Dumps Dictionary from res/download_dict.csv
+2016-04-25 10:07:50.775 Writing dataset openlylocal to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/openlylocal.gz
+2016-04-25 10:07:50.775 Finished writing dataset. Outlinks written: 1
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset enakting-population
+2016-04-25 09:53:05.885 Finished processing enakting-population. Dataset triples: 402. Total triples: 12322587
+2016-04-25 10:07:51.792 No outlinks for dataset enakting-population
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset enakting-population
+2016-04-25 09:53:05.885 Finished processing enakting-population. Dataset triples: 5. Total triples: 12322592
+2016-04-25 10:07:51.987 No outlinks for dataset enakting-population
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset prefix-cc
+2016-04-25 09:53:05.885 Finished processing prefix-cc. Dataset triples: 5. Total triples: 12322597
+2016-04-25 10:07:52.175 No outlinks for dataset prefix-cc
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset prefix-cc
+2016-04-25 09:53:05.885 Finished processing prefix-cc. Dataset triples: 6009. Total triples: 12328606
+2016-04-25 10:07:52.729 No outlinks for dataset prefix-cc
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset glastonbury-2011
+2016-04-25 09:53:05.885 Finished processing glastonbury-2011. Dataset triples: 42038. Total triples: 12370644
+Reading Dumps Dictionary from res/download_dict.csv
+2016-04-25 10:07:56.548 Writing dataset glastonbury-2011 to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/glastonbury-2011.gz
+2016-04-25 10:07:56.548 Finished writing dataset. Outlinks written: 1
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset glastonbury-2011
+2016-04-25 09:53:05.885 Finished processing glastonbury-2011. Dataset triples: 42038. Total triples: 12412682
+Reading Dumps Dictionary from res/download_dict.csv
+2016-04-25 10:07:59.558 Writing dataset glastonbury-2011 to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/glastonbury-2011.gz
+2016-04-25 10:07:59.558 Finished writing dataset. Outlinks written: 1
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset glastonbury-2011
+2016-04-25 09:53:05.885 Finished processing glastonbury-2011. Dataset triples: 497. Total triples: 12413179
+Reading Dumps Dictionary from res/download_dict.csv
+2016-04-25 10:07:59.753 Writing dataset glastonbury-2011 to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/glastonbury-2011.gz
+2016-04-25 10:07:59.753 Finished writing dataset. Outlinks written: 1
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset twc-hub
+2016-04-25 09:53:05.885 Finished processing twc-hub. Dataset triples: 863. Total triples: 12414042
+Reading Dumps Dictionary from res/download_dict.csv
+2016-04-25 10:08:00.003 Writing dataset twc-hub to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/twc-hub.gz
+2016-04-25 10:08:00.003 Finished writing dataset. Outlinks written: 1
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset eagle-i-uccaribe
+2016-04-25 09:53:05.885 Finished processing eagle-i-uccaribe. Dataset triples: 2811. Total triples: 12416853
+2016-04-25 10:08:00.344 No outlinks for dataset eagle-i-uccaribe
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset eagle-i-utep
+2016-04-25 09:53:05.885 Finished processing eagle-i-utep. Dataset triples: 7. Total triples: 12416860
+2016-04-25 10:08:00.526 No outlinks for dataset eagle-i-utep
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset viaf
+2016-04-25 09:53:05.885 Finished processing viaf. Dataset triples: 8. Total triples: 12416868
+2016-04-25 10:08:00.717 No outlinks for dataset viaf
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset vivo-cu-boulder
+2016-04-25 09:53:05.885 Finished processing vivo-cu-boulder. Dataset triples: 4. Total triples: 12416872
+2016-04-25 10:08:00.88 No outlinks for dataset vivo-cu-boulder
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset vivo
+2016-04-25 09:53:05.885 Finished processing vivo. Dataset triples: 7. Total triples: 12416879
+2016-04-25 10:08:01.027 No outlinks for dataset vivo
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset nvs
+2016-04-25 09:53:05.885 Finished processing nvs. Dataset triples: 201. Total triples: 12417080
+Reading Dumps Dictionary from res/download_dict.csv
+2016-04-25 10:08:01.203 Writing dataset nvs to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/nvs.gz
+2016-04-25 10:08:01.203 Finished writing dataset. Outlinks written: 2
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset nvs
+2016-04-25 09:53:05.885 Finished processing nvs. Dataset triples: 355. Total triples: 12417435
+2016-04-25 10:08:01.404 No outlinks for dataset nvs
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset nvs
+2016-04-25 09:53:05.885 Finished processing nvs. Dataset triples: 271. Total triples: 12417706
+2016-04-25 10:08:01.588 No outlinks for dataset nvs
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset nvs
+2016-04-25 09:53:05.885 Finished processing nvs. Dataset triples: 1141. Total triples: 12418847
+2016-04-25 10:08:01.844 No outlinks for dataset nvs
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset open-data-thesaurus
+2016-04-25 09:53:05.885 Finished processing open-data-thesaurus. Dataset triples: 3. Total triples: 12418850
+2016-04-25 10:08:02.033 No outlinks for dataset open-data-thesaurus
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset world-bank-linked-data
+2016-04-25 09:53:05.885 Finished processing world-bank-linked-data. Dataset triples: 1265. Total triples: 12420115
+Reading Dumps Dictionary from res/download_dict.csv
+2016-04-25 10:08:02.389 Writing dataset world-bank-linked-data to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/world-bank-linked-data.gz
+2016-04-25 10:08:02.389 Finished writing dataset. Outlinks written: 8
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset world-bank-linked-data
+2016-04-25 09:53:05.885 Finished processing world-bank-linked-data. Dataset triples: 2979. Total triples: 12423094
+Reading Dumps Dictionary from res/download_dict.csv
+2016-04-25 10:08:02.798 Writing dataset world-bank-linked-data to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/world-bank-linked-data.gz
+2016-04-25 10:08:02.798 Finished writing dataset. Outlinks written: 1
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset radatana
+2016-04-25 09:53:05.885 Finished processing radatana. Dataset triples: 9370074. Total triples: 21793168
+Reading Dumps Dictionary from res/download_dict.csv
+2016-04-25 10:17:34.344 Writing dataset radatana to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/radatana.gz
+2016-04-25 10:17:34.344 Finished writing dataset. Outlinks written: 3
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 No valid dataset for http://www.crystallography.net/archives/cod-rdf.nt.xz. Skipping dataset
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset eea
+2016-04-25 09:53:05.885 Finished processing eea. Dataset triples: 278. Total triples: 21793446
+2016-04-25 10:17:34.748 No outlinks for dataset eea
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset fao-geopolitical-ontology
+2016-04-25 09:53:05.885 Finished processing fao-geopolitical-ontology. Dataset triples: 23692. Total triples: 21817138
+Reading Dumps Dictionary from res/download_dict.csv
+2016-04-25 10:17:36.339 Writing dataset fao-geopolitical-ontology to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/fao-geopolitical-ontology.gz
+2016-04-25 10:17:36.339 Finished writing dataset. Outlinks written: 1
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset geonames-semantic-web
+2016-04-25 09:53:05.885 Finished processing geonames-semantic-web. Dataset triples: 2824. Total triples: 21819962
+2016-04-25 10:17:36.702 No outlinks for dataset geonames-semantic-web
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset glottolog
+2016-04-25 09:53:05.885 Finished processing glottolog. Dataset triples: 23. Total triples: 21819985
+2016-04-25 10:17:36.888 No outlinks for dataset glottolog
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset icane
+2016-04-25 09:53:05.885 Finished processing icane. Dataset triples: 30. Total triples: 21820015
+Reading Dumps Dictionary from res/download_dict.csv
+2016-04-25 10:17:37.07 Writing dataset icane to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/icane.gz
+2016-04-25 10:17:37.07 Finished writing dataset. Outlinks written: 3
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset isocat
+2016-04-25 09:53:05.885 Finished processing isocat. Dataset triples: 5. Total triples: 21820020
+2016-04-25 10:17:37.394 No outlinks for dataset isocat
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset chempedia-rdf
+2016-04-25 09:53:05.885 Finished processing chempedia-rdf. Dataset triples: 6. Total triples: 21820026
+2016-04-25 10:17:37.578 No outlinks for dataset chempedia-rdf
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 No valid dataset for http://www.languagelibrary.eu/owl/italWordNet15/schema/wordsenseandwords. Skipping dataset
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 No valid dataset for http://www.languagelibrary.eu/owl/simple/inds/SimpleEntries. Skipping dataset
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset yago
+2016-04-25 09:53:05.885 Finished processing yago. Dataset triples: 20. Total triples: 21820046
+2016-04-25 10:17:37.998 No outlinks for dataset yago
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset my-experiment
+2016-04-25 09:53:05.885 Finished processing my-experiment. Dataset triples: 276. Total triples: 21820322
+Reading Dumps Dictionary from res/download_dict.csv
+2016-04-25 10:17:38.218 Writing dataset my-experiment to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/my-experiment.gz
+2016-04-25 10:17:38.218 Finished writing dataset. Outlinks written: 1
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset nobelprizes
+2016-04-25 09:53:05.885 Finished processing nobelprizes. Dataset triples: 133. Total triples: 21820455
+Reading Dumps Dictionary from res/download_dict.csv
+2016-04-25 10:17:38.394 Writing dataset nobelprizes to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/nobelprizes.gz
+2016-04-25 10:17:38.394 Finished writing dataset. Outlinks written: 1
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset twc-hub
+2016-04-25 09:53:05.885 Finished processing twc-hub. Dataset triples: 241. Total triples: 21820696
+2016-04-25 10:17:38.567 No outlinks for dataset twc-hub
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset twc-ieeevis
+2016-04-25 09:53:05.885 Finished processing twc-ieeevis. Dataset triples: 241. Total triples: 21820937
+2016-04-25 10:17:38.752 No outlinks for dataset twc-ieeevis
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset productontology
+2016-04-25 09:53:05.885 Finished processing productontology. Dataset triples: 17029. Total triples: 21837966
+Reading Dumps Dictionary from res/download_dict.csv
+2016-04-25 10:17:40.18 Writing dataset productontology to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/productontology.gz
+2016-04-25 10:17:40.18 Finished writing dataset. Outlinks written: 1
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset clean-energy-data-reegle
+2016-04-25 09:53:05.885 Finished processing clean-energy-data-reegle. Dataset triples: 191. Total triples: 21838157
+2016-04-25 10:17:40.56 No outlinks for dataset clean-energy-data-reegle
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset sudocfr
+2016-04-25 09:53:05.885 Finished processing sudocfr. Dataset triples: 55. Total triples: 21838212
+Reading Dumps Dictionary from res/download_dict.csv
+2016-04-25 10:17:40.762 Writing dataset sudocfr to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/sudocfr.gz
+2016-04-25 10:17:40.762 Finished writing dataset. Outlinks written: 4
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset thesesfr
+2016-04-25 09:53:05.885 Finished processing thesesfr. Dataset triples: 49. Total triples: 21838261
+Reading Dumps Dictionary from res/download_dict.csv
+2016-04-25 10:17:40.96 Writing dataset thesesfr to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/thesesfr.gz
+2016-04-25 10:17:40.96 Finished writing dataset. Outlinks written: 3
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset uk-postcodes
+2016-04-25 09:53:05.885 Finished processing uk-postcodes. Dataset triples: 21. Total triples: 21838282
+2016-04-25 10:17:41.193 No outlinks for dataset uk-postcodes
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset twc-ieeevis
+2016-04-25 09:53:05.885 Finished processing twc-ieeevis. Dataset triples: 102. Total triples: 21838384
+2016-04-25 10:17:41.396 No outlinks for dataset twc-ieeevis
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset twc-hub
+2016-04-25 09:53:05.885 Finished processing twc-hub. Dataset triples: 119. Total triples: 21838503
+2016-04-25 10:17:41.576 No outlinks for dataset twc-hub
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset twc-hub
+2016-04-25 09:53:05.885 Finished processing twc-hub. Dataset triples: 450. Total triples: 21838953
+2016-04-25 10:17:41.8 No outlinks for dataset twc-hub
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset twc-ieeevis
+2016-04-25 09:53:05.885 Finished processing twc-ieeevis. Dataset triples: 33. Total triples: 21838986
+2016-04-25 10:17:41.978 No outlinks for dataset twc-ieeevis
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset twc-ieeevis
+2016-04-25 09:53:05.885 Finished processing twc-ieeevis. Dataset triples: 74. Total triples: 21839060
+2016-04-25 10:17:42.197 No outlinks for dataset twc-ieeevis
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset event-media
+2016-04-25 09:53:05.885 Finished processing event-media. Dataset triples: 340. Total triples: 21839400
+2016-04-25 10:17:42.425 No outlinks for dataset event-media
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset twc-hub
+2016-04-25 09:53:05.885 Finished processing twc-hub. Dataset triples: 1664. Total triples: 21841064
+2016-04-25 10:17:42.76 No outlinks for dataset twc-hub
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset yovisto
+2016-04-25 09:53:05.885 Finished processing yovisto. Dataset triples: 191. Total triples: 21841255
+2016-04-25 10:17:42.953 No outlinks for dataset yovisto
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset zbw-labs
+2016-04-25 09:53:05.885 Finished processing zbw-labs. Dataset triples: 47. Total triples: 21841302
+2016-04-25 10:17:43.154 No outlinks for dataset zbw-labs
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset organic-edunet
+2016-04-25 09:53:05.885 Finished processing organic-edunet. Dataset triples: 49. Total triples: 21841351
+2016-04-25 10:17:43.374 No outlinks for dataset organic-edunet
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbnary
+2016-04-25 09:53:05.885 Finished processing dbnary. Dataset triples: 554. Total triples: 21841905
+2016-04-25 10:17:43.57 No outlinks for dataset dbnary
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset polymath-virtual-library
+2016-04-25 09:53:05.885 Finished processing polymath-virtual-library. Dataset triples: 31. Total triples: 21841936
+Reading Dumps Dictionary from res/download_dict.csv
+2016-04-25 10:17:43.74 Writing dataset polymath-virtual-library to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/polymath-virtual-library.gz
+2016-04-25 10:17:43.74 Finished writing dataset. Outlinks written: 2
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset polymath-virtual-library
+2016-04-25 09:53:05.885 Finished processing polymath-virtual-library. Dataset triples: 57. Total triples: 21841993
+Reading Dumps Dictionary from res/download_dict.csv
+2016-04-25 10:17:43.901 Writing dataset polymath-virtual-library to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/polymath-virtual-library.gz
+2016-04-25 10:17:43.901 Finished writing dataset. Outlinks written: 2
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset hebis-bibliographic-resources
+2016-04-25 09:53:05.885 Finished processing hebis-bibliographic-resources. Dataset triples: 18. Total triples: 21842011
+2016-04-25 10:17:44.072 No outlinks for dataset hebis-bibliographic-resources
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset diavgeia
+2016-04-25 09:53:05.885 Finished processing diavgeia. Dataset triples: 104. Total triples: 21842115
+2016-04-25 10:17:44.288 No outlinks for dataset diavgeia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset libver
+2016-04-25 09:53:05.885 Finished processing libver. Dataset triples: 26. Total triples: 21842141
+2016-04-25 10:17:44.488 No outlinks for dataset libver
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset ontos-news-portal
+2016-04-25 09:53:05.885 Finished processing ontos-news-portal. Dataset triples: 170427. Total triples: 22012568
+Reading Dumps Dictionary from res/download_dict.csv
+2016-04-25 10:17:55.875 Writing dataset ontos-news-portal to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/ontos-news-portal.gz
+2016-04-25 10:17:55.875 Finished writing dataset. Outlinks written: 1
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset rkb-explorer-deepblue
+2016-04-25 09:53:05.885 Finished processing rkb-explorer-deepblue. Dataset triples: 12. Total triples: 22012580
+2016-04-25 10:17:57.681 No outlinks for dataset rkb-explorer-deepblue
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset rkb-explorer-deepblue
+2016-04-25 09:53:05.885 Finished processing rkb-explorer-deepblue. Dataset triples: 12. Total triples: 22012592
+2016-04-25 10:17:59.65 No outlinks for dataset rkb-explorer-deepblue
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset rkb-explorer-deepblue
+2016-04-25 09:53:05.885 Finished processing rkb-explorer-deepblue. Dataset triples: 48. Total triples: 22012640
+2016-04-25 10:18:03.624 No outlinks for dataset rkb-explorer-deepblue
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset rkb-explorer-deepblue
+2016-04-25 09:53:05.885 Finished processing rkb-explorer-deepblue. Dataset triples: 49. Total triples: 22012689
+2016-04-25 10:18:08.358 No outlinks for dataset rkb-explorer-deepblue
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset rkb-explorer-deepblue
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset rkb-explorer-deepblue
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset rkb-explorer-deepblue
+2016-04-25 09:53:05.885 Finished processing rkb-explorer-deepblue. Dataset triples: 32. Total triples: 22012721
+2016-04-25 10:18:10.118 No outlinks for dataset rkb-explorer-deepblue
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset rkb-explorer-deepblue
+2016-04-25 09:53:05.885 Finished processing rkb-explorer-deepblue. Dataset triples: 32. Total triples: 22012753
+2016-04-25 10:18:10.45 No outlinks for dataset rkb-explorer-deepblue
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 22012753
+2016-04-25 10:18:10.746 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 22012753
+2016-04-25 10:18:11.135 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 22012753
+2016-04-25 10:18:11.568 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 22012753
+2016-04-25 10:18:11.922 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 10823. Total triples: 22023576
+2016-04-25 10:18:13.832 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 16256. Total triples: 22039832
+2016-04-25 10:18:14.892 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 48768. Total triples: 22088600
+2016-04-25 10:18:18.387 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 10823. Total triples: 22099423
+2016-04-25 10:18:21.746 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 373269. Total triples: 22472692
+2016-04-25 10:18:50.663 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 572. Total triples: 22473264
+2016-04-25 10:18:51.136 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 22473264
+2016-04-25 10:18:51.481 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 22473264
+2016-04-25 10:18:51.838 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 22473264
+2016-04-25 10:18:52.268 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 52813. Total triples: 22526077
+2016-04-25 10:18:55.824 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 22526077
+2016-04-25 10:18:56.158 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 3362. Total triples: 22529439
+2016-04-25 10:18:56.658 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 22529439
+2016-04-25 10:18:57.03 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 16626. Total triples: 22546065
+2016-04-25 10:18:58.431 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 9939. Total triples: 22556004
+2016-04-25 10:18:59.209 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 22556004
+2016-04-25 10:18:59.544 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 4663. Total triples: 22560667
+2016-04-25 10:19:00.456 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 22560667
+2016-04-25 10:19:00.763 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 22560667
+2016-04-25 10:19:01.158 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 168. Total triples: 22560835
+2016-04-25 10:19:01.497 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 133529. Total triples: 22694364
+2016-04-25 10:19:12.372 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 22694364
+2016-04-25 10:19:19.027 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 22694364
+2016-04-25 10:19:19.463 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 22694364
+2016-04-25 10:19:19.863 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 4663. Total triples: 22699027
+2016-04-25 10:19:21.12 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 554. Total triples: 22699581
+2016-04-25 10:19:21.523 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 5542. Total triples: 22705123
+2016-04-25 10:19:22.157 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 22705123
+2016-04-25 10:19:22.52 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 11437. Total triples: 22716560
+2016-04-25 10:19:24.266 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 67864. Total triples: 22784424
+2016-04-25 10:19:28.463 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 45384. Total triples: 22829808
+2016-04-25 10:19:31.859 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 357219. Total triples: 23187027
+2016-04-25 10:19:59.968 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 23187027
+2016-04-25 10:20:00.295 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 11437. Total triples: 23198464
+2016-04-25 10:20:02.49 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 884. Total triples: 23199348
+2016-04-25 10:20:02.811 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 23199348
+2016-04-25 10:20:03.17 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 23199348
+2016-04-25 10:20:03.543 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 23199348
+2016-04-25 10:20:03.968 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 23199348
+2016-04-25 10:20:04.366 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 23199348
+2016-04-25 10:20:04.709 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 15128. Total triples: 23214476
+2016-04-25 10:20:05.835 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 23214476
+2016-04-25 10:20:06.19 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 41910. Total triples: 23256386
+2016-04-25 10:20:08.884 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 610. Total triples: 23256996
+2016-04-25 10:20:09.325 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 23256996
+2016-04-25 10:20:09.64 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 42280. Total triples: 23299276
+2016-04-25 10:20:12.098 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 23299276
+2016-04-25 10:20:12.394 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 41910. Total triples: 23341186
+2016-04-25 10:20:14.913 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 126840. Total triples: 23468026
+2016-04-25 10:20:26.731 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 23468026
+2016-04-25 10:20:29.246 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 261836. Total triples: 23729862
+2016-04-25 10:20:48.301 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 358344. Total triples: 24088206
+2016-04-25 10:21:16.285 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 24088206
+2016-04-25 10:21:16.592 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 24088206
+2016-04-25 10:21:16.918 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 24088206
+2016-04-25 10:21:17.258 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 24088206
+2016-04-25 10:21:17.65 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 8. Total triples: 24088214
+2016-04-25 10:21:18.015 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 24088214
+2016-04-25 10:21:18.347 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 257486. Total triples: 24345700
+2016-04-25 10:21:38.061 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 30093. Total triples: 24375793
+2016-04-25 10:21:52.845 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 24375793
+2016-04-25 10:21:53.136 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 24375793
+2016-04-25 10:21:53.498 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 24375793
+2016-04-25 10:21:53.882 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 24375793
+2016-04-25 10:22:04.539 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 24375793
+2016-04-25 10:22:04.886 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 2730. Total triples: 24378523
+2016-04-25 10:22:05.339 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 2632. Total triples: 24381155
+2016-04-25 10:22:05.897 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 24381155
+2016-04-25 10:22:06.179 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 18711. Total triples: 24399866
+2016-04-25 10:22:07.535 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 340. Total triples: 24400206
+2016-04-25 10:22:18.737 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 24400206
+2016-04-25 10:22:31.605 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 57208. Total triples: 24457414
+2016-04-25 10:22:35.135 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 266326. Total triples: 24723740
+2016-04-25 10:22:55.801 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 2146. Total triples: 24725886
+2016-04-25 10:22:56.261 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 9622. Total triples: 24735508
+2016-04-25 10:22:58.035 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 24735508
+2016-04-25 10:22:58.382 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 3145. Total triples: 24738653
+2016-04-25 10:22:59.576 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 24738653
+2016-04-25 10:22:59.926 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 49164. Total triples: 24787817
+2016-04-25 10:23:03.348 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 24787817
+2016-04-25 10:23:03.744 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 16388. Total triples: 24804205
+2016-04-25 10:23:04.907 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 24804205
+2016-04-25 10:23:05.255 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 80. Total triples: 24804285
+2016-04-25 10:23:05.621 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 24804285
+2016-04-25 10:23:05.963 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 24804285
+2016-04-25 10:23:06.255 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 24804285
+2016-04-25 10:23:06.644 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 60252. Total triples: 24864537
+2016-04-25 10:23:20.181 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 24864537
+Reading Dumps Dictionary from res/download_dict.csv
+2016-04-25 10:23:20.513 No outlinks for dataset dbpedia
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 9074. Total triples: 24873611
+2016-04-25 10:23:21.329 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 59991. Total triples: 24933602
+2016-04-25 10:23:29.124 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 24933602
+2016-04-25 10:23:33.821 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 889881. Total triples: 25823483
+2016-04-25 10:24:31.976 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 25823483
+2016-04-25 10:24:32.245 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 25823483
+2016-04-25 10:24:32.535 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 25823483
+2016-04-25 10:24:32.859 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 25823483
+2016-04-25 10:24:33.24 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 25823483
+2016-04-25 10:24:33.652 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 4680604. Total triples: 30504087
+2016-04-25 10:30:42.166 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 606961. Total triples: 31111048
+2016-04-25 10:31:28.899 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 1840. Total triples: 31112888
+2016-04-25 10:31:35.078 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 31112888
+2016-04-25 10:31:41.025 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 202321. Total triples: 31315209
+2016-04-25 10:31:52.807 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 320857. Total triples: 31636066
+2016-04-25 10:32:18.488 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 31636066
+2016-04-25 10:32:25.182 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 776. Total triples: 31636842
+2016-04-25 10:32:26.129 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 31636842
+2016-04-25 10:32:26.67 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 31636842
+2016-04-25 10:32:27.043 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 31636842
+2016-04-25 10:32:27.382 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 70215. Total triples: 31707057
+2016-04-25 10:32:32.601 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 16087. Total triples: 31723144
+2016-04-25 10:32:35.703 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 134880. Total triples: 31858024
+2016-04-25 10:32:44.379 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 16087. Total triples: 31874111
+2016-04-25 10:32:47.732 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 31874111
+2016-04-25 10:32:50.084 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 23405. Total triples: 31897516
+2016-04-25 10:32:55.712 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 31897516
+2016-04-25 10:33:00.74 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 31897516
+2016-04-25 10:33:05.806 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 8246. Total triples: 31905762
+2016-04-25 10:33:06.64 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 31905762
+2016-04-25 10:33:06.909 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 1037908. Total triples: 32943670
+2016-04-25 10:34:12.23 Writing dataset dbpedia to /media/sf_Host/Documents/EclipseWorkspace/LODRank/output/dbpedia.gz
+2016-04-25 10:34:12.23 Finished writing dataset. Outlinks written: 1
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 32943670
+2016-04-25 10:34:12.568 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 56773. Total triples: 33000443
+2016-04-25 10:34:25.594 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 33000443
+2016-04-25 10:34:28.893 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 8784. Total triples: 33009227
+2016-04-25 10:34:31.058 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 33009227
+2016-04-25 10:34:31.364 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 80. Total triples: 33009307
+2016-04-25 10:34:31.706 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 33009307
+2016-04-25 10:34:32.098 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 401996. Total triples: 33411303
+2016-04-25 10:34:59.879 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 33411303
+2016-04-25 10:35:04.669 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 33411303
+2016-04-25 10:35:05.452 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 56615. Total triples: 33467918
+2016-04-25 10:35:23.602 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 3871497. Total triples: 37339415
+2016-04-25 10:40:29.153 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 133999. Total triples: 37473414
+2016-04-25 10:40:36.699 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 37473414
+2016-04-25 10:40:36.99 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 37473414
+2016-04-25 10:40:37.34 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 37473414
+2016-04-25 10:40:37.715 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 37473414
+2016-04-25 10:40:38.014 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 37473414
+2016-04-25 10:40:38.348 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 87833. Total triples: 37561247
+2016-04-25 10:40:45.15 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 37561247
+2016-04-25 10:40:45.508 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 37561247
+2016-04-25 10:40:45.823 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 3677. Total triples: 37564924
+2016-04-25 10:40:46.322 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 37564924
+2016-04-25 10:40:46.597 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 11031. Total triples: 37575955
+2016-04-25 10:40:47.564 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 30. Total triples: 37575985
+2016-04-25 10:40:47.863 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 200. Total triples: 37576185
+2016-04-25 10:40:48.156 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 37576185
+2016-04-25 10:40:48.457 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 3050. Total triples: 37579235
+2016-04-25 10:40:49.024 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 3050. Total triples: 37582285
+2016-04-25 10:40:49.729 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 38877. Total triples: 37621162
+2016-04-25 10:40:58.161 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia
+2016-04-25 09:53:05.885 Finished processing dbpedia. Dataset triples: 0. Total triples: 37621162
+2016-04-25 10:40:58.587 No outlinks for dataset dbpedia
+Reading Dumps Dictionary from res/download_dict.csv
+Reading Namespaces Dictionary from res/namespace_dict.csv
+Dictionaries loaded.
+2016-04-25 09:53:05.885 Processing dataset dbpedia

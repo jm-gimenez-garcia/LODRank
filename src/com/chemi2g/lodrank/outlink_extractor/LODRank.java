@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.chemi2g.lodrank.outlink_extractor;
 
@@ -33,17 +33,17 @@ public class LODRank {
 	OutlinkExtractor		outlinkExtractor;
 	Date					date	= new Date();
 
-	private LODRank(String[] args) {
-		conf = OutlinkConfiguration.newInstance(args);
+	private LODRank(final String[] args) {
+		this.conf = OutlinkConfiguration.newInstance(args);
 	}
 
-	public static void main(String[] args) {
-		LODRank lodrank = new LODRank(args);
+	public static void main(final String[] args) {
+		final LODRank lodrank = new LODRank(args);
 		lodrank.readPartialProcessing(OutlinkConfiguration.DEFAULT_CONFIG_FOLDER);
 		lodrank.run(OutlinkConfiguration.DEFAULT_CONFIG_FOLDER);
 	}
 
-	void readPartialProcessing(String path) {
+	void readPartialProcessing(final String path) {
 		BufferedReader reader = null;
 		String line;
 		// File fileDatasets = new File(path + "/" + PROCESSED_DATASETS_FILE);
@@ -51,38 +51,38 @@ public class LODRank {
 			try {
 				// Read number of triples
 				reader = new BufferedReader(new FileReader(path + "/" + OutlinkConfiguration.PROCESSED_TRIPLES_FILE));
-				numTriples = Long.parseLong(reader.readLine());
+				this.numTriples = Long.parseLong(reader.readLine());
 				reader.close();
-			} catch (NumberFormatException e) {
-				numTriples = 0;
-				numDatasets = 0;
+			} catch (final NumberFormatException e) {
+				this.numTriples = 0;
+				this.numDatasets = 0;
 				System.err.println("Error reading number of triples processed. Starting count again.");
 			}
-			// Read already processed datasets
-			processedDatasets = new HashSet<>();
+			// Read already processed dictionaryPatterns
+			this.processedDatasets = new HashSet<>();
 			reader = new BufferedReader(new FileReader(path + "/" + OutlinkConfiguration.PROCESSED_DATASETS_FILE));
 			while ((line = reader.readLine()) != null) {
-				processedDatasets.add(line);
-				numDatasets++;
+				this.processedDatasets.add(line);
+				this.numDatasets++;
 			}
-			System.out.println("Partial status retrieved. Datasets processed: " + numDatasets + ". Triples processed: " + numTriples);
+			System.out.println("Partial status retrieved. Datasets processed: " + this.numDatasets + ". Triples processed: " + this.numTriples);
 			System.out.println("Resuming process...");
-		} catch (FileNotFoundException e) {
+		} catch (final FileNotFoundException e) {
 			System.err.println("No files to retrieve partial processing status. Starting again.");
-			processedDatasets = new HashSet<>();
-			numTriples = 0;
-			numDatasets = 0;
-		} catch (IOException e) {
+			this.processedDatasets = new HashSet<>();
+			this.numTriples = 0;
+			this.numDatasets = 0;
+		} catch (final IOException e) {
 			e.printStackTrace();
 			System.err.println("Error while retrieven partial processing status. Starting again.");
-			processedDatasets = new HashSet<>();
-			numTriples = 0;
-			numDatasets = 0;
+			this.processedDatasets = new HashSet<>();
+			this.numTriples = 0;
+			this.numDatasets = 0;
 		} finally {
 			if (reader != null) {
 				try {
 					reader.close();
-				} catch (IOException e) {
+				} catch (final IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
@@ -90,34 +90,35 @@ public class LODRank {
 		}
 	}
 
-	void run(String path) {
-		outlinkExtractor = new OutlinkExtractor(conf.processSubjects(), conf.processPredicates(), conf.processObjects(), numTriples);
-		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+	void run(final String path) {
+		this.outlinkExtractor = new OutlinkExtractor(this.conf.processSubjects(), this.conf.processPredicates(), this.conf.processObjects(), this.numTriples);
+		final BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter processedDatasetsWriter;
 		String line;
 		int numLine = 0;
-		if (processedDatasets == null) {
-			processedDatasets = new HashSet<>();
+		if (this.processedDatasets == null) {
+			this.processedDatasets = new HashSet<>();
 		}
 
 		try {
 			processedDatasetsWriter = new BufferedWriter(new FileWriter(path + "/" + OutlinkConfiguration.PROCESSED_DATASETS_FILE, true));
 
 			Runtime.getRuntime().addShutdownHook(new Thread() {
+				@Override
 				public void run() {
 					FileWriter numTriplesWriter = null;
 					try {
 						numTriplesWriter = new FileWriter(path + "/" + OutlinkConfiguration.PROCESSED_TRIPLES_FILE);
-						numTriplesWriter.write(Long.toString(outlinkExtractor.getNumTriples()) + "\n");
+						numTriplesWriter.write(Long.toString(LODRank.this.outlinkExtractor.getNumTriples()) + "\n");
 						numTriplesWriter.flush();
 						processedDatasetsWriter.flush();
-					} catch (IOException e) {
+					} catch (final IOException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					} finally {
 						try {
 							numTriplesWriter.close();
-						} catch (IOException e) {
+						} catch (final IOException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
 						}
@@ -126,40 +127,40 @@ public class LODRank {
 			});
 
 			while ((line = reader.readLine()) != null) {
-				if (((++numLine) - conf.getStart()) % conf.getStep() == 0) {
-					String[] urls = line.split(" ");
-					if (!processedDatasets.contains(urls[1])) {
+				if (((++numLine) - this.conf.getStart()) % this.conf.getStep() == 0) {
+					final String[] urls = line.split(" ");
+					if (!this.processedDatasets.contains(urls[1])) {
 						Entry<String, Set<String>> outlinks;
 						try {
-							if ((outlinks = outlinkExtractor.processDataset(urls[1], urls[0])) != null) {
-								Thread t = new Thread(new OutlinkWriter(outlinks.getKey(), outlinks.getValue()));
-								t.start();
+							if ((outlinks = this.outlinkExtractor.processDataset(urls[1], urls[0])) != null) {
+								final OutlinkWriter ow = new OutlinkWriter(outlinks.getKey(), outlinks.getValue());
+								ow.run();
 								processedDatasetsWriter.write(urls[1] + "\n");
 							}
-						} catch (FileNotFoundException e) {
-							System.err.println(new Timestamp(date.getTime()) + " No cleaned file found for dataset " + urls[1]);
-							System.err.println(new Timestamp(date.getTime()) + " Resuming the process...");
-						} catch (RiotException e) {
-							System.err.println(new Timestamp(date.getTime()) + " Error with Jena Parser while processing dataset " + urls[1]);
-							System.err.println(new Timestamp(date.getTime()) + " Resuming the process...");
-						} catch (IOException e) {
-							System.err.println(new Timestamp(date.getTime()) + " IOException while processing dataset " + urls[1]);
+						} catch (final FileNotFoundException e) {
+							System.err.println(new Timestamp(this.date.getTime()) + " No cleaned file found for dataset " + urls[1]);
+							System.err.println(new Timestamp(this.date.getTime()) + " Resuming the process...");
+						} catch (final RiotException e) {
+							System.err.println(new Timestamp(this.date.getTime()) + " Error with Jena Parser while processing dataset " + urls[1]);
+							System.err.println(new Timestamp(this.date.getTime()) + " Resuming the process...");
+						} catch (final IOException e) {
+							System.err.println(new Timestamp(this.date.getTime()) + " IOException while processing dataset " + urls[1]);
 							e.printStackTrace();
-							System.err.println(new Timestamp(date.getTime()) + " Resuming the process...");
-						} catch (HttpException e) {
-							System.err.println(new Timestamp(date.getTime()) + " HttpException while processing dataset " + urls[1]);
+							System.err.println(new Timestamp(this.date.getTime()) + " Resuming the process...");
+						} catch (final HttpException e) {
+							System.err.println(new Timestamp(this.date.getTime()) + " HttpException while processing dataset " + urls[1]);
 							e.printStackTrace();
-							System.err.println(new Timestamp(date.getTime()) + " Resuming the process...");
+							System.err.println(new Timestamp(this.date.getTime()) + " Resuming the process...");
 						}
 					} else {
-						System.out.println(new Timestamp(date.getTime()) + urls[1] + " already processed. Skipping.");
+						System.out.println(new Timestamp(this.date.getTime()) + urls[1] + " already processed. Skipping.");
 					}
 				}
 				// else {
 				// System.out.println("Dataset " + numLine + " ignored");
 				// }
 			}
-		} catch (IOException e) {
+		} catch (final IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

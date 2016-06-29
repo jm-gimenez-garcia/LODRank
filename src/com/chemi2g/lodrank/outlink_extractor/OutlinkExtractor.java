@@ -37,23 +37,25 @@ public class OutlinkExtractor {
 	static final String	DATASET_URI_QUERY_WITH_ARCHIVE	= "SELECT ?url WHERE {?archive <http://lodlaundromat.org/ontology/containsEntry> <%s> . ?archive <http://lodlaundromat.org/ontology/url> ?url}";
 	static final long	ZERO_TRIPLES					= 0;
 
+	URIcomparator		uriComparator					= new URIcomparator();;
+
 	Date				date							= new Date();
 
 	boolean				processSubjects, processPredicates, processObjects;
 	long				numTriples;
 
-	public OutlinkExtractor(boolean processSubjects, boolean processPredicates, boolean processObjects, long numTriples) {
+	public OutlinkExtractor(final boolean processSubjects, final boolean processPredicates, final boolean processObjects, final long numTriples) {
 		this.processSubjects = processSubjects;
 		this.processPredicates = processPredicates;
 		this.processObjects = processObjects;
 		this.numTriples = numTriples;
 	}
 
-	public OutlinkExtractor(boolean processSubjects, boolean processPredicates, boolean processObjects) {
+	public OutlinkExtractor(final boolean processSubjects, final boolean processPredicates, final boolean processObjects) {
 		this(processSubjects, processPredicates, processObjects, ZERO_TRIPLES);
 	}
 
-	public OutlinkExtractor(long numTriples) {
+	public OutlinkExtractor(final long numTriples) {
 		this(OutlinkConfiguration.PROCESS_SUBJECTS_DEFAULT, OutlinkConfiguration.PROCESS_PREDICATES_DEFAULT, OutlinkConfiguration.PROCESS_OBJECTS_DEFAULT, numTriples);
 	}
 
@@ -61,12 +63,12 @@ public class OutlinkExtractor {
 		this(OutlinkConfiguration.PROCESS_SUBJECTS_DEFAULT, OutlinkConfiguration.PROCESS_PREDICATES_DEFAULT, OutlinkConfiguration.PROCESS_OBJECTS_DEFAULT, ZERO_TRIPLES);
 	}
 
-	URL query(String queryString, String endpoint) throws MalformedURLException {
+	URL query(final String queryString, final String endpoint) throws MalformedURLException {
 		URL url = null;
 		try {
-			Query query = QueryFactory.create(queryString);
-			QueryExecution qexec = QueryExecutionFactory.sparqlService(endpoint, query);
-			ResultSet results = qexec.execSelect();
+			final Query query = QueryFactory.create(queryString);
+			final QueryExecution qexec = QueryExecutionFactory.sparqlService(endpoint, query);
+			final ResultSet results = qexec.execSelect();
 			if (results.hasNext()) {
 				// if (results.hasNext()) {
 				// throw new MultipleResultsException("More than one result when
@@ -75,44 +77,40 @@ public class OutlinkExtractor {
 				url = new URL(results.next().getResource("url").toString());
 			}
 			qexec.close();
-		} catch (HttpException e) {
-			System.err.println(new Timestamp(date.getTime()) + " HttpException while querying SPARQL endpoint");
+		} catch (final HttpException e) {
+			System.err.println(new Timestamp(this.date.getTime()) + " HttpException while querying SPARQL endpoint");
 			e.printStackTrace();
-			System.err.println(new Timestamp(date.getTime()) + " Resuming the process...");
+			System.err.println(new Timestamp(this.date.getTime()) + " Resuming the process...");
 		}
 		return url;
 	}
 
-	Entry<String, Set<String>> processDataset(String resource, String download) throws HttpException, FileNotFoundException, RiotException, IOException {
+	Entry<String, Set<String>> processDataset(final String resource, final String download) throws HttpException, FileNotFoundException, RiotException, IOException {
 		Entry<String, Set<String>> processedDataset = null;
-		PipedRDFIterator<Triple> triples = new PipedRDFIterator<Triple>();
-		PipedRDFStream<Triple> rdfStream = new PipedTriplesStream(triples);
-		ExecutorService executor = Executors.newSingleThreadExecutor();
+		final PipedRDFIterator<Triple> triples = new PipedRDFIterator<Triple>();
+		final PipedRDFStream<Triple> rdfStream = new PipedTriplesStream(triples);
+		final ExecutorService executor = Executors.newSingleThreadExecutor();
 		String datasetPLD = null;
-		Set<String> outlinks = new HashSet<String>();
+		final Set<String> outlinks = new HashSet<String>();
 		Triple triple;
 		String resourcePLD;
-		PLDcomparator pldComparator = new PLDcomparator();
 		long datasetTriples = 0;
 		URL datasetUrl;
 		if ((datasetUrl = query(String.format(DATASET_URI_QUERY, resource), LODLAUNDROMAT_ENDPOINT)) == null) {
 			datasetUrl = query(String.format(DATASET_URI_QUERY_WITH_ARCHIVE, resource), LODLAUNDROMAT_ENDPOINT);
 		}
-		if ((datasetPLD = pldComparator.getPLD(datasetUrl)) != null) {
-			System.out.println(new Timestamp(date.getTime()) + " Processing dataset " + datasetPLD);
-			URL downloadUrl = new URL(download);
+		if ((datasetPLD = this.uriComparator.getDatasetFromDumpURL(datasetUrl.toString())) != null) {
+			System.out.println(new Timestamp(this.date.getTime()) + " Processing dataset " + datasetPLD);
+			final URL downloadUrl = new URL(download);
 			final InputStream stream = new GZIPInputStream(downloadUrl.openStream());
 
 			// Create a runnable for our parser thread
-			Runnable parser = new Runnable() {
-				@Override
-				public void run() {
-					// Call the parsing process.
-					if (download.endsWith(QUADS_END)) {
-						RDFDataMgr.parse(rdfStream, stream, Lang.NQUADS);
-					} else {
-						RDFDataMgr.parse(rdfStream, stream, Lang.NTRIPLES);
-					}
+			final Runnable parser = () -> {
+				// Call the parsing process.
+				if (download.endsWith(QUADS_END)) {
+					RDFDataMgr.parse(rdfStream, stream, Lang.NQUADS);
+				} else {
+					RDFDataMgr.parse(rdfStream, stream, Lang.NTRIPLES);
 				}
 			};
 
@@ -123,36 +121,36 @@ public class OutlinkExtractor {
 				datasetTriples++;
 				triple = triples.next();
 				if (this.processSubjects && triple.getSubject().isURI()) {
-					resourcePLD = pldComparator.getPLD(triple.getSubject().toString());
+					resourcePLD = this.uriComparator.getDatasetFromIRI(triple.getSubject().toString());
 					if (resourcePLD != null && !datasetPLD.equals(resourcePLD)) {
 						outlinks.add(resourcePLD);
 					}
 				}
 				if (this.processPredicates && triple.getPredicate().isURI()) {
-					resourcePLD = pldComparator.getPLD(triple.getPredicate().toString());
+					resourcePLD = this.uriComparator.getDatasetFromIRI(triple.getPredicate().toString());
 					if (resourcePLD != null && !datasetPLD.equals(resourcePLD)) {
 						outlinks.add(resourcePLD);
 					}
 				}
 				if (this.processObjects && triple.getObject().isURI()) {
-					resourcePLD = pldComparator.getPLD(triple.getObject().toString());
+					resourcePLD = this.uriComparator.getDatasetFromIRI(triple.getObject().toString());
 					if (resourcePLD != null && !datasetPLD.equals(resourcePLD)) {
 						outlinks.add(resourcePLD);
 					}
 				}
 			}
 
-			numTriples += datasetTriples;
-			System.out.println(new Timestamp(date.getTime()) + " Finished processing " + datasetPLD + ". Dataset triples: " + datasetTriples + ". Total triples: " + numTriples);
+			this.numTriples += datasetTriples;
+			System.out.println(new Timestamp(this.date.getTime()) + " Finished processing " + datasetPLD + ". Dataset triples: " + datasetTriples + ". Total triples: " + this.numTriples);
 
 			processedDataset = new SimpleEntry<String, Set<String>>(datasetPLD, outlinks);
 		} else {
-			System.out.println(new Timestamp(date.getTime()) + " No valid PLD for " + datasetUrl.toString() + ". Skipping dataset");
+			System.out.println(new Timestamp(this.date.getTime()) + " No valid dataset for " + datasetUrl.toString() + ". Skipping dataset");
 		}
 		return processedDataset;
 	}
 
 	public long getNumTriples() {
-		return numTriples;
+		return this.numTriples;
 	}
 }
