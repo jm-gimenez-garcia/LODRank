@@ -91,7 +91,13 @@ public class LODRank {
 	}
 
 	void run(final String path) {
-		this.outlinkExtractor = new OutlinkExtractor(this.conf.processSubjects(), this.conf.processPredicates(), this.conf.processObjects(), this.numTriples);
+		try {
+			this.outlinkExtractor = new OutlinkExtractor(this.conf.processSubjects(), this.conf.processPredicates(), this.conf.processObjects(), this.numTriples);
+		} catch (final IOException e) {
+			System.err.println(new Timestamp(this.date.getTime()) + " IOException while processing properties file.");
+			e.printStackTrace();
+			System.err.println(new Timestamp(this.date.getTime()) + " Resuming the process...");
+		}
 		final BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter processedDatasetsWriter;
 		String line;

@@ -14,6 +14,7 @@ public final class OutlinkConfiguration {
 
 	static final String								DEFAULT_DICTIONARY_DUMPS_FILE		= "download_dict.csv";
 	static final String								DEFAULT_DICTIONARY_NAMESPACES_FILE	= "namespace_dict.csv";
+	static final String								DEFAULT_PREDICATES_FILE				= "predicates_to_ignore.csv";
 	static final int								START_DEFAULT						= 1;
 	static final int								STEP_DEFAULT						= 1;
 	static final boolean							PROCESS_SUBJECTS_DEFAULT			= true;
@@ -45,6 +46,9 @@ public final class OutlinkConfiguration {
 
 	@Parameter(names = { "-n", "--dictionaryNamespaces" }, description = "Dictionary file for dataset namespaces")
 	String											dictionaryNamespacesFile			= DEFAULT_CONFIG_FOLDER + "/" + DEFAULT_DICTIONARY_NAMESPACES_FILE;
+
+	@Parameter(names = { "-w", "--ignoreObjectsWithPredicate" }, description = "File for predicates. Objects in triples with those predicates wil be ignored.")
+	String											predicatesFile						= DEFAULT_CONFIG_FOLDER + "/" + DEFAULT_PREDICATES_FILE;
 
 	private OutlinkConfiguration(final String[] args) {
 		this.jc = new JCommander(this, args);
@@ -101,6 +105,10 @@ public final class OutlinkConfiguration {
 
 	public String getDictionaryNamespacesFile() {
 		return this.dictionaryNamespacesFile;
+	}
+
+	public String getPredicatesFile() {
+		return this.predicatesFile;
 	}
 
 }

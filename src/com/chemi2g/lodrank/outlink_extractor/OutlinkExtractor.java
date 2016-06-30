@@ -1,6 +1,9 @@
 package com.chemi2g.lodrank.outlink_extractor;
 
+import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
@@ -31,36 +34,52 @@ import org.apache.jena.riot.lang.PipedTriplesStream;
 
 public class OutlinkExtractor {
 
-	static final String	QUADS_END						= ".nq.gz";
-	static final String	LODLAUNDROMAT_ENDPOINT			= "http://sparql.backend.lodlaundromat.org";
-	static final String	DATASET_URI_QUERY				= "SELECT ?url WHERE {<%s> <http://lodlaundromat.org/ontology/url> ?url}";
-	static final String	DATASET_URI_QUERY_WITH_ARCHIVE	= "SELECT ?url WHERE {?archive <http://lodlaundromat.org/ontology/containsEntry> <%s> . ?archive <http://lodlaundromat.org/ontology/url> ?url}";
-	static final long	ZERO_TRIPLES					= 0;
+	static final String		QUADS_END						= ".nq.gz";
+	static final String		LODLAUNDROMAT_ENDPOINT			= "http://sparql.backend.lodlaundromat.org";
+	static final String		DATASET_URI_QUERY				= "SELECT ?url WHERE {<%s> <http://lodlaundromat.org/ontology/url> ?url}";
+	static final String		DATASET_URI_QUERY_WITH_ARCHIVE	= "SELECT ?url WHERE {?archive <http://lodlaundromat.org/ontology/containsEntry> <%s> . ?archive <http://lodlaundromat.org/ontology/url> ?url}";
+	static final long		ZERO_TRIPLES					= 0;
 
-	URIcomparator		uriComparator					= new URIcomparator();;
+	OutlinkConfiguration	conf;
 
-	Date				date							= new Date();
+	URIcomparator			uriComparator					= new URIcomparator();
 
-	boolean				processSubjects, processPredicates, processObjects;
-	long				numTriples;
+	HashSet<String>			predicates						= new HashSet<String>();
 
-	public OutlinkExtractor(final boolean processSubjects, final boolean processPredicates, final boolean processObjects, final long numTriples) {
+	Date					date							= new Date();
+
+	boolean					processSubjects, processPredicates, processObjects;
+	long					numTriples;
+
+	public OutlinkExtractor(final boolean processSubjects, final boolean processPredicates, final boolean processObjects, final long numTriples) throws IOException {
+		this.conf = OutlinkConfiguration.getInstance();
 		this.processSubjects = processSubjects;
 		this.processPredicates = processPredicates;
 		this.processObjects = processObjects;
 		this.numTriples = numTriples;
+		readPredicates(new File(this.conf.getPredicatesFile()));
 	}
 
-	public OutlinkExtractor(final boolean processSubjects, final boolean processPredicates, final boolean processObjects) {
+	public OutlinkExtractor(final boolean processSubjects, final boolean processPredicates, final boolean processObjects) throws IOException {
 		this(processSubjects, processPredicates, processObjects, ZERO_TRIPLES);
 	}
 
-	public OutlinkExtractor(final long numTriples) {
+	public OutlinkExtractor(final long numTriples) throws IOException {
 		this(OutlinkConfiguration.PROCESS_SUBJECTS_DEFAULT, OutlinkConfiguration.PROCESS_PREDICATES_DEFAULT, OutlinkConfiguration.PROCESS_OBJECTS_DEFAULT, numTriples);
 	}
 
-	public OutlinkExtractor() {
+	public OutlinkExtractor() throws IOException {
 		this(OutlinkConfiguration.PROCESS_SUBJECTS_DEFAULT, OutlinkConfiguration.PROCESS_PREDICATES_DEFAULT, OutlinkConfiguration.PROCESS_OBJECTS_DEFAULT, ZERO_TRIPLES);
+	}
+
+	void readPredicates(final File file) throws IOException {
+		String line;
+		final BufferedReader reader = new BufferedReader(new FileReader(file));
+		System.out.println("Reading properties to ignore objects from " + file.toString());
+		while ((line = reader.readLine()) != null) {
+			this.predicates.add(line);
+		}
+		reader.close();
 	}
 
 	URL query(final String queryString, final String endpoint) throws MalformedURLException {
@@ -133,9 +152,14 @@ public class OutlinkExtractor {
 					}
 				}
 				if (this.processObjects && triple.getObject().isURI()) {
-					resourcePLD = this.uriComparator.getDatasetFromIRI(triple.getObject().toString());
-					if (resourcePLD != null && !datasetPLD.equals(resourcePLD)) {
-						outlinks.add(resourcePLD);
+					if (this.predicates.contains(triple.getPredicate().toString())) {
+						// System.out.println("Ignoring object: " + triple.getObject().toString());
+						// System.out.println("Predicate: " + triple.getPredicate().toString());
+					} else {
+						resourcePLD = this.uriComparator.getDatasetFromIRI(triple.getObject().toString());
+						if (resourcePLD != null && !datasetPLD.equals(resourcePLD)) {
+							outlinks.add(resourcePLD);
+						}
 					}
 				}
 			}
