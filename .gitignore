@@ -1,1 +1,11 @@
+# System files
+.*
+!.gitignore
+
+# Editor backup files
+*~
+
+# Other
 /bin/
+/target/
+/output/
