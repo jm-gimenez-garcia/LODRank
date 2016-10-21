@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+
+	<lang>
+		<value>NTRIPLES</value>
+		<force>false</force>
+	</lang>
+	
+	<input>
+		<file>/home/chemi2g/Frank/documents.head</file>
+		<start>1</start>
+		<step>1</step>
+		<separator xml:space="preserve"> </separator>
+	</input>
+	
+	<process>
+		<subjects>true</subjects>
+		<predicates>false</predicates>
+		<objects>true</objects>
+	</process>
+	
+<!-- 	<dictionary> -->
+<!-- 		<file></file> -->
+<!-- 		<separator>\,</separator> -->
+<!-- 	</dictionary> -->
+	
+	<exclusions>
+		<exclusion>
+			<role_to_exclude>OBJECT</role_to_exclude>
+			<role_to_check>PREDICATE</role_to_check>
+			<condition>EQUALS</condition>
+			<value>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</value>
+		</exclusion>
+	</exclusions>
+	
+</configuration>

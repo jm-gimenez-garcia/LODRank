@@ -1,0 +1,10 @@
+<http://csarven.ca/#cert> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/auth/cert#RSAPublicKey> <http://csarven.ca> .
+<http://csarven.ca/#cert> <http://www.w3.org/ns/auth/cert#exponent> "65537"^^<http://www.w3.org/2001/XMLSchema#integer> <http://csarven.ca> .
+<http://csarven.ca/#cert> <http://www.w3.org/ns/auth/cert#modulus> "CAF6A78D16E80F930337453D84F790764C56EA58ACBEDA5DE3D17B6E673569EF581B896B74466655FB3DA2F9A961C6D46D99E77053A0AAF83FAC4EAB8B9198F20930672DE22CB1B22F0AB85A66C95A6830EAA7BE1E28EC197FF7A4A448243AF2F206D2BE458BBC71F32AA073315E22C9B2668FE15C732A33EDCFD9FA39D04706191044F33E580F954E6A1D9C4BF08C820C4666F5EF8554CF1430A33B630C80D11F7D309CB641B213FCBFC9A5B699AF625FE23627C403FF12D79514178728537AA173ABA5BC5AEB87569EBA1BE3274AA53D9B2F8FE72F13BA8125E734E8E31128303C76594327C4C2E431E38F2B326CC244080E597A4D27A98AE3FE1EDB5DE785"^^<http://www.w3.org/2001/XMLSchema#hexBinary> <http://csarven.ca> .
+<http://csarven.ca/#i> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> <https://csarven.rww.io> .
+<http://csarven.ca/#i> <http://www.w3.org/2000/01/rdf-schema#label> "Sarven Capadisli"@en <http://csarven.rww.io> .
+<http://csarven.ca/#i> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://csarven.ca/contacts> <http://csarven.rww.io> .
+<http://csarven.ca/#i> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://csarven.ca/cv> <http://csarven.rww.io> .
+<http://csarven.ca/#i> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://csarven.ca/library> <http://csarven.rww.io> .
+<http://csarven.ca/#i> <http://www.w3.org/ns/auth/cert#key> <http://csarven.ca/#cert> <http://csarven.rww.io> .
+<http://csarven.ca/#i> <http://www.w3.org/ns/pim/space#storage> <https://csarven.rww.io/> <http://csarven.rww.io> .

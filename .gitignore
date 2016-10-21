@@ -1,11 +1,5 @@
-# System files
-.*
-!.gitignore
-
-# Editor backup files
-*~
-
-# Other
-/bin/
-/target/
 /output/
+/res/
+/scripts/
+/target/
+/src/main/java/eu/wdaqua/lodrank/old
