@@ -1,3 +1,11 @@
+# System files
+.*
+!.gitignore
+
+# Editor backup files
+*~
+
+#Other
 /output/
 /res/
 /scripts/

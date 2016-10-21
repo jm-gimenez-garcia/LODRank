@@ -7,13 +7,10 @@ import java.util.regex.Pattern;
 
 import eu.wdaqua.lodrank.exception.SourceNotOpenableException;
 import eu.wdaqua.lodrank.loader.DictionaryLoader;
-import eu.wdaqua.lodrank.old.OutlinkConfiguration;
 
 public class URLtoDictionaryEntry extends URLProcessor {
 
-	protected LinkedHashMap<Pattern, String>	dictionary;
-
-	protected OutlinkConfiguration				conf;
+	protected LinkedHashMap<Pattern, String> dictionary;
 
 	public URLtoDictionaryEntry() {
 		this.dictionary = new LinkedHashMap<>();
