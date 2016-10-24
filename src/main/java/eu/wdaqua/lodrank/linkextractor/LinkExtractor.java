@@ -212,8 +212,10 @@ public class LinkExtractor {
 						break;
 					}
 				}
+				this.logger.debug("Role " + role + " not excluded.");
 			}
 			if (process) {
+				this.logger.debug("Extracting links for role " + role + ".");
 				switch (role) {
 					case SUBJECT:
 						link = getLinkFromNode(triple.getSubject());
@@ -225,6 +227,8 @@ public class LinkExtractor {
 						link = getLinkFromNode(triple.getObject());
 						break;
 				}
+			} else {
+				this.logger.debug("Not xxtracting links for role " + role + ".");
 			}
 		}
 		return link;
