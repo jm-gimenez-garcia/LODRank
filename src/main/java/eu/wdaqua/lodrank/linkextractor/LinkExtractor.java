@@ -102,6 +102,18 @@ public class LinkExtractor {
 		this.listOfExclusions = listOfExclusions;
 	}
 
+	public void setProcessSubjects(final boolean processSubjects) {
+		this.processSubjects = processSubjects;
+	}
+
+	public void setProcessPredicates(final boolean processPredicates) {
+		this.processPredicates = processPredicates;
+	}
+
+	public void setProcessObjects(final boolean processObjects) {
+		this.processObjects = processObjects;
+	}
+
 	public void addExclusion(final String roleToExclude, final String roleToCheck, final String rule, final String value) {
 		addExclusion(Role.getRole(roleToExclude), Role.getRole(roleToCheck), Rule.getRule(rule), value);
 	}
@@ -212,8 +224,10 @@ public class LinkExtractor {
 						break;
 					}
 				}
+				this.logger.debug("Role " + role + " not excluded.");
 			}
 			if (process) {
+				this.logger.debug("Extracting links for role " + role + ".");
 				switch (role) {
 					case SUBJECT:
 						link = getLinkFromNode(triple.getSubject());
@@ -225,6 +239,8 @@ public class LinkExtractor {
 						link = getLinkFromNode(triple.getObject());
 						break;
 				}
+			} else {
+				this.logger.debug("Not xxtracting links for role " + role + ".");
 			}
 		}
 		return link;

@@ -183,6 +183,9 @@ public class LODRank {
 
 		this.logger.debug("Creating LinkExtractor.");
 		final LinkExtractor linkExtractor = new LinkExtractor();
+		linkExtractor.setProcessSubjects(getProcessSubjects());
+		linkExtractor.setProcessPredicates(getProcessPredicates());
+		linkExtractor.setProcessObjects(getProcessObjects());
 		if (this.conf.containsKey(NAME_EXCLUSIONS)) {
 			this.logger.info("Reading list of exclusions from configuration file");
 			final List<String> roles_to_exclude = this.conf.getList(String.class, NAME_ROLE_TO_EXCLUDE);
