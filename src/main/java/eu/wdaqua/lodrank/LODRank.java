@@ -135,10 +135,10 @@ public class LODRank {
 
 	protected LODRank(final String[] args) throws ConfigurationException {
 		this.logger = LogManager.getLogger(getClass());
+		this.jc = new JCommander(this, args);
 		this.conf = new Configurations().xml(getConfigurationFile());
 
 		// Validate parameters
-		this.jc = new JCommander(this, args);
 		if (getInputFile() != null && getInputURL() != null) {
 			this.logger.error("It is not possible to specify input file and input URL at the same time.");
 			System.exit(1);
