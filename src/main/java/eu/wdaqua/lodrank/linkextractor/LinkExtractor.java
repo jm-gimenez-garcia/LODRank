@@ -50,7 +50,7 @@ public class LinkExtractor {
 	};
 
 	public enum Rule {
-		CONTAINS("CONTAINS"), DATASET("DATASET"), DISTINCT("DISTINCT"), EQUAL("EQUALS");
+		CONTAINS("CONTAINS"), DATASET("DATASET"), DISTINCT("DISTINCT"), EQUAL("EQUAL");
 
 		String label;
 
