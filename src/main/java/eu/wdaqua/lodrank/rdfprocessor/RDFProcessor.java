@@ -76,7 +76,9 @@ public class RDFProcessor {
 			try {
 				this.linkExtractor.setTriple((Triple) triple);
 				final Entry<String, Collection<String>> entry = this.linkExtractor.getLinks();
-				this.linkWriter.addLinks(entry.getKey(), entry.getValue());
+				if (entry != null) {
+					this.linkWriter.addLinks(entry.getKey(), entry.getValue());
+				}
 			} catch (final InvalidResourceException e) {
 				this.logger.warn("Invalid resource when reading Triple [" + ((Triple) triple).toString() + "]");
 			}
@@ -94,7 +96,9 @@ public class RDFProcessor {
 			try {
 				this.linkExtractor.setQuad((Quad) quad);
 				final Entry<String, Collection<String>> entry = this.linkExtractor.getLinks();
-				this.linkWriter.addLinks(entry.getKey(), entry.getValue());
+				if (entry != null) {
+					this.linkWriter.addLinks(entry.getKey(), entry.getValue());
+				}
 			} catch (final InvalidResourceException e) {
 				this.logger.warn("Invalid resource when reading Quad [" + ((Quad) quad).toString() + "]");
 			}
