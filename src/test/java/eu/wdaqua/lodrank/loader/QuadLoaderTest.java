@@ -35,10 +35,9 @@ public class QuadLoaderTest {
 	ClassLoader						classLoader;
 
 	/**
-	 * @throws java.lang.Exception
 	 */
 	@Before
-	public void setUp() throws Exception {
+	public void setUp() {
 		this.loader = new QuadLoader(Lang.NQUADS);
 		this.classLoader = getClass().getClassLoader();
 	}
