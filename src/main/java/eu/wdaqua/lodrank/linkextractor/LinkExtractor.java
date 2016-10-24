@@ -50,7 +50,7 @@ public class LinkExtractor {
 	};
 
 	public enum Rule {
-		CONTAINS("CONTAINS"), DATASET("DATASET"), DISTINCT("DISTINCT"), EQUAL("EQUAL");
+		CONTAINS("CONTAINS"), DATASET("DATASET"), DISTINCT("DISTINCT"), EQUAL("EQUALS");
 
 		String label;
 
@@ -224,7 +224,6 @@ public class LinkExtractor {
 						break;
 					}
 				}
-				this.logger.debug("Role " + role + " not excluded.");
 			}
 			if (process) {
 				this.logger.debug("Extracting links for role " + role + ".");
@@ -240,7 +239,7 @@ public class LinkExtractor {
 						break;
 				}
 			} else {
-				this.logger.debug("Not xxtracting links for role " + role + ".");
+				this.logger.debug("Not extracting links for role " + role + ".");
 			}
 		}
 		return link;
