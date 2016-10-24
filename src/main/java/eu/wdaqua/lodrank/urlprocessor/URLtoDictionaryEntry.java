@@ -10,21 +10,30 @@ import eu.wdaqua.lodrank.loader.DictionaryLoader;
 
 public class URLtoDictionaryEntry extends URLProcessor {
 
-	protected LinkedHashMap<Pattern, String> dictionary;
+	protected LinkedHashMap<Pattern, String>	dictionary;
+
+	protected URLtoPLD							urlToPld;
 
 	public URLtoDictionaryEntry() {
 		this.dictionary = new LinkedHashMap<>();
+		this.urlToPld = new URLtoPLD();
 	}
 
 	@Override
 	public String getDataset() {
 		Matcher matcher;
 		String dataset = null;
-		for (final Map.Entry<Pattern, String> entry : this.dictionary.entrySet()) {
-			matcher = entry.getKey().matcher(this.url.toString());
-			if (matcher.find()) {
-				dataset = this.dictionary.get(entry.getKey()); // Moving the pattern to the first position.
-				break;
+		if (this.url != null) {
+			for (final Map.Entry<Pattern, String> entry : this.dictionary.entrySet()) {
+				matcher = entry.getKey().matcher(this.url.toString());
+				if (matcher.find()) {
+					dataset = this.dictionary.get(entry.getKey()); // Moving the pattern to the first position.
+					break;
+				}
+			}
+			if (dataset == null) {
+				this.logger.debug("No dictionary entry for URL " + this.url + ". Using PLD as fallback.");
+				dataset = this.urlToPld.getDataset(this.url);
 			}
 		}
 		return dataset;
