@@ -63,7 +63,7 @@ public class LinkExtractorTest {
 	 */
 	@Test
 	public void testAddAction1st() {
-		this.linkExtractor.addExclusion(Role.OBJECT, Role.PREDICATE, Rule.EQUAL, "http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
+		this.linkExtractor.addExclusion(Role.OBJECT, Role.PREDICATE, Rule.EQUALS, "http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
 		assertTrue(this.linkExtractor.listOfExclusions.size() == 1);
 		assertFalse(this.linkExtractor.listOfExclusions.containsKey(Role.SUBJECT));
 		assertFalse(this.linkExtractor.listOfExclusions.containsKey(Role.PREDICATE));
@@ -71,7 +71,7 @@ public class LinkExtractorTest {
 		assertTrue(this.linkExtractor.listOfExclusions.get(Role.OBJECT).size() == 1);
 		this.linkExtractor.listOfExclusions.get(Role.OBJECT).forEach(exclusion -> {
 			assertTrue(exclusion.getRole().equals(Role.PREDICATE));
-			assertTrue(exclusion.getRule().equals(Rule.EQUAL));
+			assertTrue(exclusion.getRule().equals(Rule.EQUALS));
 			assertTrue(exclusion.value.equals("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"));
 		});
 	}
@@ -81,8 +81,8 @@ public class LinkExtractorTest {
 	 */
 	@Test
 	public void testAddActionEqual() {
-		this.linkExtractor.addExclusion(Role.OBJECT, Role.PREDICATE, Rule.EQUAL, "http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
-		this.linkExtractor.addExclusion(Role.OBJECT, Role.PREDICATE, Rule.EQUAL, "http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
+		this.linkExtractor.addExclusion(Role.OBJECT, Role.PREDICATE, Rule.EQUALS, "http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
+		this.linkExtractor.addExclusion(Role.OBJECT, Role.PREDICATE, Rule.EQUALS, "http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
 		assertTrue(this.linkExtractor.listOfExclusions.size() == 1);
 		assertFalse(this.linkExtractor.listOfExclusions.containsKey(Role.SUBJECT));
 		assertFalse(this.linkExtractor.listOfExclusions.containsKey(Role.PREDICATE));
@@ -90,7 +90,7 @@ public class LinkExtractorTest {
 		assertTrue(this.linkExtractor.listOfExclusions.get(Role.OBJECT).size() == 1);
 		this.linkExtractor.listOfExclusions.get(Role.OBJECT).forEach(exclusion -> {
 			assertTrue(exclusion.getRole().equals(Role.PREDICATE));
-			assertTrue(exclusion.getRule().equals(Rule.EQUAL));
+			assertTrue(exclusion.getRule().equals(Rule.EQUALS));
 			assertTrue(exclusion.value.equals("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"));
 		});
 	}
@@ -100,8 +100,8 @@ public class LinkExtractorTest {
 	 */
 	@Test
 	public void testAddAction2ndRole() {
-		this.linkExtractor.addExclusion(Role.OBJECT, Role.PREDICATE, Rule.EQUAL, "http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
-		this.linkExtractor.addExclusion(Role.SUBJECT, Role.PREDICATE, Rule.EQUAL, "http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
+		this.linkExtractor.addExclusion(Role.OBJECT, Role.PREDICATE, Rule.EQUALS, "http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
+		this.linkExtractor.addExclusion(Role.SUBJECT, Role.PREDICATE, Rule.EQUALS, "http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
 		assertTrue(this.linkExtractor.listOfExclusions.size() == 2);
 		assertTrue(this.linkExtractor.listOfExclusions.containsKey(Role.SUBJECT));
 		assertFalse(this.linkExtractor.listOfExclusions.containsKey(Role.PREDICATE));
@@ -110,20 +110,20 @@ public class LinkExtractorTest {
 		assertTrue(this.linkExtractor.listOfExclusions.get(Role.OBJECT).size() == 1);
 		this.linkExtractor.listOfExclusions.get(Role.SUBJECT).forEach(exclusion -> {
 			assertTrue(exclusion.getRole().equals(Role.PREDICATE));
-			assertTrue(exclusion.getRule().equals(Rule.EQUAL));
+			assertTrue(exclusion.getRule().equals(Rule.EQUALS));
 			assertTrue(exclusion.value.equals("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"));
 		});
 		this.linkExtractor.listOfExclusions.get(Role.OBJECT).forEach(exclusion -> {
 			assertTrue(exclusion.getRole().equals(Role.PREDICATE));
-			assertTrue(exclusion.getRule().equals(Rule.EQUAL));
+			assertTrue(exclusion.getRule().equals(Rule.EQUALS));
 			assertTrue(exclusion.value.equals("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"));
 		});
 	}
 
 	@Test
 	public void testAddAction2ndRule() {
-		this.linkExtractor.addExclusion(Role.OBJECT, Role.PREDICATE, Rule.EQUAL, "http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
-		this.linkExtractor.addExclusion(Role.OBJECT, Role.PREDICATE, Rule.EQUAL, "http://www.w3.org/2000/01/rdf-schema#label");
+		this.linkExtractor.addExclusion(Role.OBJECT, Role.PREDICATE, Rule.EQUALS, "http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
+		this.linkExtractor.addExclusion(Role.OBJECT, Role.PREDICATE, Rule.EQUALS, "http://www.w3.org/2000/01/rdf-schema#label");
 		assertTrue(this.linkExtractor.listOfExclusions.size() == 1);
 		assertFalse(this.linkExtractor.listOfExclusions.containsKey(Role.SUBJECT));
 		assertFalse(this.linkExtractor.listOfExclusions.containsKey(Role.PREDICATE));
@@ -197,7 +197,7 @@ public class LinkExtractorTest {
 	@Test
 	public void testGetLinksWithExclusions() throws MalformedURLException, InvalidResourceException {
 		this.linkExtractor.setUrlProcessor(new URLtoPLD());
-		this.linkExtractor.addExclusion(Role.OBJECT, Role.PREDICATE, Rule.EQUAL, "http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
+		this.linkExtractor.addExclusion(Role.OBJECT, Role.PREDICATE, Rule.EQUALS, "http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
 		this.linkExtractor.setDataset(new URL("http://xmlns.com/foaf/0.1/Person"));
 		this.linkExtractor.setTriple(new Triple(NodeFactory.createURI("http://csarven.ca/#cert"), NodeFactory.createURI("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"), NodeFactory.createURI("http://www.w3.org/ns/auth/cert#RSAPublicKey")));
 		final Entry<String, Collection<String>> entry = this.linkExtractor.getLinks();

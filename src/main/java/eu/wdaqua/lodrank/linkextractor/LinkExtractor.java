@@ -50,7 +50,7 @@ public class LinkExtractor {
 	};
 
 	public enum Rule {
-		CONTAINS("CONTAINS"), DATASET("DATASET"), DISTINCT("DISTINCT"), EQUAL("EQUAL");
+		CONTAINS("CONTAINS"), DATASET("DATASET"), DISTINCT("DISTINCT"), EQUALS("EQUALS");
 
 		String label;
 
@@ -62,8 +62,8 @@ public class LinkExtractor {
 				rule = DATASET;
 			} else if (ruleString.toUpperCase().equals(DISTINCT.toString().toUpperCase())) {
 				rule = DISTINCT;
-			} else if (ruleString.toUpperCase().equals(EQUAL.toString().toUpperCase())) {
-				rule = EQUAL;
+			} else if (ruleString.toUpperCase().equals(EQUALS.toString().toUpperCase())) {
+				rule = EQUALS;
 			}
 			return rule;
 		}
@@ -285,8 +285,8 @@ public class LinkExtractor {
 				try {
 					this.dataset = LinkExtractor.this.urlProcessor.getDataset(new URL(value));
 				} catch (final MalformedURLException e) {
-					LinkExtractor.this.logger.error("[" + value + "] is not a valid URL. Impossible to extract dataset. Rule EQUAL will be used instead.");
-					this.rule = Rule.EQUAL;
+					LinkExtractor.this.logger.error("[" + value + "] is not a valid URL. Impossible to extract dataset. Rule EQUALS will be used instead.");
+					this.rule = Rule.EQUALS;
 					this.value = value;
 				}
 			} else {
@@ -326,7 +326,7 @@ public class LinkExtractor {
 						}
 					};
 					break;
-				case EQUAL:
+				case EQUALS:
 					this.checkFunction = (v) -> {
 						if (v.equals(value)) {
 							return true;
