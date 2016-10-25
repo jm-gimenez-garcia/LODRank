@@ -20,7 +20,7 @@ public class URLtoPLD extends URLProcessor {
 	public String getDataset() {
 		try {
 			return this.url != null ? InternetDomainName.from(this.url.getHost()).topPrivateDomain().toString() : null;
-		} catch (final IllegalArgumentException e) {
+		} catch (final IllegalArgumentException | IllegalStateException e) {
 			this.logger.warn("Could not extract link because " + this.url.toString() + " has not a valid domain name.");
 			return null;
 		}
