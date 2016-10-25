@@ -44,7 +44,7 @@ public class LODRank {
 	protected static final String	NAME_LANG						= "lang.value";
 	protected static final String	NAME_FORCE_LANG					= "lang.force";
 	protected static final String	NAME_INPUT_FILE					= "input.file";
-	protected static final String	NAME_INPUT_URL					= "input.URL";
+	protected static final String	NAME_INPUT_URL					= "input.url";
 	protected static final String	NAME_START						= "input.start";
 	protected static final String	NAME_STEP						= "input.step";
 	protected static final String	NAME_INPUT_SEPARATOR			= "input.separator";
