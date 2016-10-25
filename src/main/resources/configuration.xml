@@ -7,7 +7,8 @@
 	</lang>
 	
 	<input>
-		<file>/home/chemi2g/Frank/documents.head</file>
+<!-- 		<file>/home/chemi2g/Frank/documents.head</file> -->
+		<url>http://webdatacommons.org/structureddata/2015-11/files/file.list</url>
 		<start>1</start>
 		<step>1</step>
 		<separator xml:space="preserve"> </separator>
@@ -15,22 +16,22 @@
 	
 	<process>
 		<subjects>true</subjects>
-		<predicates>false</predicates>
+		<predicates>true</predicates>
 		<objects>true</objects>
 	</process>
 	
 <!-- 	<dictionary> -->
-<!-- 		<file></file> -->
+<!-- 		<file>res/namespace_dict.csv</file> -->
 <!-- 		<separator>\,</separator> -->
 <!-- 	</dictionary> -->
 	
-	<exclusions>
-		<exclusion>
-			<role_to_exclude>OBJECT</role_to_exclude>
-			<role_to_check>PREDICATE</role_to_check>
-			<condition>EQUALS</condition>
-			<value>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</value>
-		</exclusion>
-	</exclusions>
+<!-- 	<exclusions> -->
+<!-- 		<exclusion> -->
+<!-- 			<role_to_exclude>OBJECT</role_to_exclude> -->
+<!-- 			<role_to_check>PREDICATE</role_to_check> -->
+<!-- 			<condition>EQUALS</condition> -->
+<!-- 			<value>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</value> -->
+<!-- 		</exclusion> -->
+<!-- 	</exclusions> -->
 	
 </configuration>
