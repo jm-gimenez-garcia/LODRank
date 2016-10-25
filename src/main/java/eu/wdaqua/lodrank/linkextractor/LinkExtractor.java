@@ -194,6 +194,8 @@ public class LinkExtractor {
 		} else {
 			links = new HashSet<>();
 		}
+		this.logger.debug("Getting links for triple: " + triple);
+		this.logger.debug("Dataset: " + this.datasetID);
 		links = addLinkIfNotNull(links, getLinkFromRole(Role.SUBJECT, triple));
 		links = addLinkIfNotNull(links, getLinkFromRole(Role.PREDICATE, triple));
 		links = addLinkIfNotNull(links, getLinkFromRole(Role.OBJECT, triple));
@@ -213,7 +215,7 @@ public class LinkExtractor {
 		if (role.equals(Role.SUBJECT) && this.processSubjects
 				|| role.equals(Role.PREDICATE) && this.processPredicates
 				|| role.equals(Role.OBJECT) && this.processObjects) {
-			this.logger.debug("Processing role " + role + " for triple " + triple);
+			this.logger.debug("Processing " + role + ".");
 			boolean process = true;
 			if (this.listOfExclusions.containsKey(role)) {
 				this.logger.debug("Role " + role + " is in list of exclusions. Checking if it has to be excluded.");
@@ -226,7 +228,6 @@ public class LinkExtractor {
 				}
 			}
 			if (process) {
-				this.logger.debug("Extracting links for role " + role + ".");
 				switch (role) {
 					case SUBJECT:
 						link = getLinkFromNode(triple.getSubject());
@@ -238,6 +239,7 @@ public class LinkExtractor {
 						link = getLinkFromNode(triple.getObject());
 						break;
 				}
+				this.logger.debug("Link for role " + role + " is " + link);
 			} else {
 				this.logger.debug("Not extracting links for role " + role + ".");
 			}
