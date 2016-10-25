@@ -69,20 +69,26 @@ public class RDFProcessor {
 	}
 
 	public void runTriples() throws SourceNotOpenableException, DestinationNotOpenableException {
-		this.logger.debug("Extracting links from triples for dataset " + this.linkExtractor.getDataset());
 		this.linkWriter.open();
 		this.loader.open();
-		this.loader.forEachRemaining(triple -> {
-			try {
-				this.linkExtractor.setTriple((Triple) triple);
-				final Entry<String, Collection<String>> entry = this.linkExtractor.getLinks();
-				if (entry != null) {
-					this.linkWriter.addLinks(entry.getKey(), entry.getValue());
+		if (this.linkExtractor.getDataset() != null) {
+			this.loader.forEachRemaining(triple -> {
+				try {
+					this.logger.debug("Getting links for triple: " + triple);
+					this.logger.debug("Dataset: " + this.linkExtractor.getDataset());
+					this.linkExtractor.setTriple((Triple) triple);
+					final Entry<String, Collection<String>> entry = this.linkExtractor.getLinks();
+					if (entry != null) {
+						this.linkWriter.addLinks(entry.getKey(), entry.getValue());
+					}
+				} catch (final InvalidResourceException e) {
+					this.logger.warn("Invalid resource when reading Triple [" + ((Triple) triple).toString() + "]");
 				}
-			} catch (final InvalidResourceException e) {
-				this.logger.warn("Invalid resource when reading Triple [" + ((Triple) triple).toString() + "]");
-			}
-		});
+			});
+		} else {
+			this.logger.warn("Could not obtain dataset for source " + this.loader.getSource().toString() + ". No links will be extracted.");
+		}
+
 		this.loader.close();
 		this.linkWriter.printLinks();
 		this.linkWriter.close();
@@ -94,6 +100,7 @@ public class RDFProcessor {
 		this.loader.open();
 		this.loader.forEachRemaining(quad -> {
 			try {
+				this.logger.debug("Getting links for quad: " + ((Quad) quad).toString());
 				this.linkExtractor.setQuad((Quad) quad);
 				final Entry<String, Collection<String>> entry = this.linkExtractor.getLinks();
 				if (entry != null) {

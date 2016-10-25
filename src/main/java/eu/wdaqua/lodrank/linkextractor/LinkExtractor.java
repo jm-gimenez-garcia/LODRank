@@ -103,14 +103,17 @@ public class LinkExtractor {
 	}
 
 	public void setProcessSubjects(final boolean processSubjects) {
+		this.logger.debug("Setting processSubjects = " + processSubjects);
 		this.processSubjects = processSubjects;
 	}
 
 	public void setProcessPredicates(final boolean processPredicates) {
+		this.logger.debug("Setting processPredicates = " + processPredicates);
 		this.processPredicates = processPredicates;
 	}
 
 	public void setProcessObjects(final boolean processObjects) {
+		this.logger.debug("Setting processObjects = " + processObjects);
 		this.processObjects = processObjects;
 	}
 
@@ -194,11 +197,13 @@ public class LinkExtractor {
 		} else {
 			links = new HashSet<>();
 		}
-		this.logger.debug("Getting links for triple: " + triple);
-		this.logger.debug("Dataset: " + this.datasetID);
-		links = addLinkIfNotNull(links, getLinkFromRole(Role.SUBJECT, triple));
-		links = addLinkIfNotNull(links, getLinkFromRole(Role.PREDICATE, triple));
-		links = addLinkIfNotNull(links, getLinkFromRole(Role.OBJECT, triple));
+		if (getDataset() != null) {
+			links = addLinkIfNotNull(links, getLinkFromRole(Role.SUBJECT, triple));
+			links = addLinkIfNotNull(links, getLinkFromRole(Role.PREDICATE, triple));
+			links = addLinkIfNotNull(links, getLinkFromRole(Role.OBJECT, triple));
+		} else {
+			this.logger.warn("Could not obtain dataset for triple. No links will be extracted.");
+		}
 		return links;
 	}
 

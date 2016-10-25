@@ -21,8 +21,12 @@ public abstract class Loader<I> implements Iterator<I>, AutoCloseable {
 	}
 
 	public void attachSource(final Source source) {
-		this.logger.debug("Attaching source " + source.toString() + " to " + getClass().getName());
+		this.logger.info("Attaching source " + source.toString() + " to " + getClass().getName());
 		this.source = source;
+	}
+
+	public Source getSource() {
+		return this.source;
 	}
 
 	public void open() throws SourceNotOpenableException {
