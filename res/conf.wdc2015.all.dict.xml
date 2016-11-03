@@ -26,7 +26,7 @@
         </output>
 
         <dictionary>
-        	<file>namespace_dict.csv</file>
+        	<file>../res/namespace_dict.csv</file>
         	<separator>\,</separator>
         </dictionary>
 

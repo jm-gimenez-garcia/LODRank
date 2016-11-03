@@ -29,6 +29,11 @@
                 </exclusion>
         </exclusions>
 
+        <dictionary>
+                <file>../res/namespace_dict.csv</file>
+                <separator>\,</separator>
+        </dictionary>
+        
         <output>
                 <folder>webdatacommons</folder>
                 <file>wdc2015.ontologies.csv</file>
