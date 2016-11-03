@@ -6,9 +6,11 @@
 *~
 
 #Other
+*.jpage
 dependency-reduced-pom.xml
 /bin/
 /output/
+/results/
 /scripts/
 /target/
 /src/main/java/eu/wdaqua/lodrank/old
