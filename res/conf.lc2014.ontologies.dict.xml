@@ -7,7 +7,7 @@
         </lang>
 
         <input>
-                <file>lc2014.list</file>
+                <file>../res/lc2014.list</file>
                 <start>1</start>
                 <step>1</step>
                 <separator xml:space="preserve"> </separator>
