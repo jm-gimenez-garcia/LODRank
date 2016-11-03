@@ -160,6 +160,7 @@ public class LinkExtractor {
 		try {
 			setDataset(new URL(quad.getGraph().toString()));
 		} catch (final MalformedURLException e) {
+			this.logger.warn("Graph " + quad.getGraph().toString() + " is not a valid URL");
 			throw new InvalidResourceException("Graph is not a valid URL", e);
 		}
 		setTriple(quad.asTriple());
@@ -258,7 +259,7 @@ public class LinkExtractor {
 			try {
 				link = getLinkFromUrl(new URL(node.toString()));
 			} catch (final MalformedURLException e) {
-				throw new InvalidResourceException("Error while converting resource to URL", e);
+				throw new InvalidResourceException("Error while converting " + node.toString() + " to URL", e);
 			}
 		}
 		return link;

@@ -107,7 +107,7 @@ public class RDFProcessor {
 					this.linkWriter.addLinks(entry.getKey(), entry.getValue());
 				}
 			} catch (final InvalidResourceException e) {
-				this.logger.warn("Invalid resource when reading Quad [" + ((Quad) quad).toString() + "]");
+				this.logger.debug("Invalid resource when reading Quad " + ((Quad) quad).toString());
 			}
 		});
 		this.loader.close();
