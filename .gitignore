@@ -9,7 +9,6 @@
 dependency-reduced-pom.xml
 /bin/
 /output/
-/res/
 /scripts/
 /target/
 /src/main/java/eu/wdaqua/lodrank/old
