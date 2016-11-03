@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+
+        <lang>
+                <value>NQUADS</value>
+                <force>true</force>
+        </lang>
+
+        <input>
+                <file>lc2014.list</file>
+                <start>1</start>
+                <step>1</step>
+                <separator xml:space="preserve"> </separator>
+        </input>
+
+        <process>
+                <subjects>true</subjects>
+                <predicates>true</predicates>
+                <objects>true</objects>
+                <duplicates>true</duplicates>
+        </process>
+
+        <output>
+                <folder>lod-cloud</folder>
+                <file>lc2014.all.csv</file>
+        </output>
+
+</configuration>

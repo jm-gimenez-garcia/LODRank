@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+
+        <lang>
+                <value>NQUADS</value>
+                <force>true</force>
+        </lang>
+
+        <input>
+                <file>lc2014.list</file>
+                <start>1</start>
+                <step>1</step>
+                <separator xml:space="preserve"> </separator>
+        </input>
+
+        <process>
+                <subjects>false</subjects>
+                <predicates>true</predicates>
+                <objects>true</objects>
+                <duplicates>true</duplicates>
+        </process>
+
+        <exclusions>
+                <exclusion>
+                        <role_to_exclude>OBJECT</role_to_exclude>
+                        <role_to_check>PREDICATE</role_to_check>
+                        <condition>DISTINCT</condition>
+                        <value>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</value>
+                </exclusion>
+        </exclusions>
+
+        <output>
+                <folder>lod-cloud</folder>
+                <file>lc2014.ontologies.csv</file>
+        </output>
+
+</configuration>
