@@ -3,7 +3,6 @@
  */
 package eu.wdaqua.lodrank.loader;
 
-import java.io.IOException;
 import java.io.InputStream;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -91,7 +90,7 @@ public abstract class RDFLoader<I> extends Loader<I> {
 		this.rdfIterator.close();
 		try {
 			this.inputStream.close();
-		} catch (final IOException e) {
+		} catch (final Exception e) {
 			this.logger.error("Error when closing the input inputStream");
 			e.printStackTrace();
 		}
