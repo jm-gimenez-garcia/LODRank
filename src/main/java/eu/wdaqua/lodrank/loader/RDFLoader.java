@@ -72,7 +72,12 @@ public abstract class RDFLoader<I> extends Loader<I> {
 
 	@Override
 	public boolean hasNext() {
-		return this.rdfIterator.hasNext();
+		try {
+			return this.rdfIterator.hasNext();
+		} catch (final org.apache.jena.riot.RiotException e) {
+			this.logger.error("Error when getting next triple. Returning hasNext = false.");
+			return false;
+		}
 	}
 
 	@Override
