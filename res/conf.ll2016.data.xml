@@ -2,8 +2,8 @@
 <configuration>
 
         <lang>
-                <value>NQUADS</value>
-                <force>true</force>
+                <value>NTRIPLES</value>
+                <force>false</force>
         </lang>
 
         <input>
