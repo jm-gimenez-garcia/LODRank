@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+
+        <lang>
+                <value>NQUADS</value>
+                <force>true</force>
+        </lang>
+
+        <input>
+                <file>../res/lldocuments.list</file>
+                <start>1</start>
+                <step>1</step>
+                <separator xml:space="preserve"> </separator>
+        </input>
+
+        <process>
+                <subjects>true</subjects>
+                <predicates>true</predicates>
+                <objects>true</objects>
+                <duplicates>true</duplicates>
+        </process>
+
+        <dictionary>
+        	<file>../res/namespace_dict.csv</file>
+        	<separator>\,</separator>
+        </dictionary>
+
+        <output>
+                <folder>lod-laundromat</folder>
+                <file>ll2016.all.csv</file>
+        </output>
+
+</configuration>
