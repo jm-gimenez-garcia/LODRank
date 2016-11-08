@@ -9,6 +9,7 @@ import java.util.concurrent.Executors;
 
 import org.apache.jena.riot.Lang;
 import org.apache.jena.riot.RDFDataMgr;
+import org.apache.jena.riot.RiotException;
 import org.apache.jena.riot.lang.PipedRDFIterator;
 import org.apache.jena.riot.lang.PipedRDFStream;
 import org.apache.logging.log4j.LogManager;
@@ -73,8 +74,8 @@ public abstract class RDFLoader<I> extends Loader<I> {
 	public boolean hasNext() {
 		try {
 			return this.rdfIterator.hasNext();
-		} catch (final org.apache.jena.riot.RiotException e) {
-			this.logger.error("Error when getting next triple. Returning hasNext = false.");
+		} catch (final RiotException e) {
+			this.logger.error("Error when getting next triple. Returning hasNext = false.", e);
 			return false;
 		}
 	}
