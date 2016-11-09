@@ -24,8 +24,8 @@ public class URLtoPLD extends URLProcessor {
 			this.logger.debug(this.url.getHost() + " is not under public suffix. Trying to get public suffix intead.");
 			return InternetDomainName.from(this.url.getHost()).publicSuffix() != null ? InternetDomainName.from(this.url.getHost()).publicSuffix().toString() : null;
 		} catch (final IllegalArgumentException e) {
-			this.logger.warn("Could not extract link because " + this.url.toString() + " has not a valid domain name.");
-			return null;
+			this.logger.warn("Could not extract domain name from: " + this.url.toString() + ". Returning host part: " + this.url.getHost());
+			return this.url.getHost();
 		}
 	}
 

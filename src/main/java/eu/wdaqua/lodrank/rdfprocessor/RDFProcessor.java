@@ -94,25 +94,59 @@ public class RDFProcessor {
 		this.linkWriter.close();
 	}
 
+	// public void runQuads() throws SourceNotOpenableException, DestinationNotOpenableException {
+	// this.logger.debug("Extracting links from quads.");
+	// this.linkWriter.open();
+	// this.loader.open();
+	// this.loader.forEachRemaining(quad -> {
+	// try {
+	// this.logger.debug("Getting links for quad: " + ((Quad) quad).toString());
+	// this.linkExtractor.setQuad((Quad) quad);
+	// final Entry<String, Collection<String>> entry = this.linkExtractor.getLinks();
+	// if (entry != null) {
+	// this.linkWriter.addLinks(entry.getKey(), entry.getValue());
+	// }
+	// } catch (final InvalidResourceException e) {
+	// this.logger.debug("Invalid resource when reading Quad " + ((Quad) quad).toString());
+	// }
+	// });
+	// this.loader.close();
+	// this.linkWriter.printLinks();
+	// this.linkWriter.close();
+	// }
+
 	public void runQuads() throws SourceNotOpenableException, DestinationNotOpenableException {
 		this.logger.debug("Extracting links from quads.");
 		this.linkWriter.open();
 		this.loader.open();
-		this.loader.forEachRemaining(quad -> {
-			try {
-				this.logger.debug("Getting links for quad: " + ((Quad) quad).toString());
-				this.linkExtractor.setQuad((Quad) quad);
-				final Entry<String, Collection<String>> entry = this.linkExtractor.getLinks();
-				if (entry != null) {
-					this.linkWriter.addLinks(entry.getKey(), entry.getValue());
+		try {
+			while (this.loader.hasNext()) {
+				final Quad quad = (Quad) this.loader.next();
+				try {
+					this.logger.debug("Getting links for quad: " + quad.toString());
+					this.linkExtractor.setQuad(quad);
+					final Entry<String, Collection<String>> entry = this.linkExtractor.getLinks();
+					if (entry != null) {
+						this.linkWriter.addLinks(entry.getKey(), entry.getValue());
+					}
+				} catch (final InvalidResourceException e) {
+					this.logger.debug("Invalid resource when reading Quad " + quad.toString());
 				}
-			} catch (final InvalidResourceException e) {
-				this.logger.debug("Invalid resource when reading Quad " + ((Quad) quad).toString());
 			}
-		});
-		this.loader.close();
-		this.linkWriter.printLinks();
-		this.linkWriter.close();
+		} catch (final Throwable t) {
+			this.logger.debug("Catching throwable in the loop", t);
+		}
+		try {
+			this.logger.debug("1");
+			this.loader.close();
+			this.logger.debug("2");
+			this.linkWriter.printLinks();
+			this.logger.debug("3");
+			this.linkWriter.close();
+			this.logger.debug("4");
+		} catch (final Throwable t) {
+			this.logger.debug("Catching throwable after the loop", t);
+		}
 	}
 
 }
