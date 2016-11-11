@@ -71,27 +71,34 @@ public class RDFProcessor {
 	public void runTriples() throws SourceNotOpenableException, DestinationNotOpenableException {
 		this.linkWriter.open();
 		this.loader.open();
-		if (this.linkExtractor.getDataset() != null) {
-			this.loader.forEachRemaining(triple -> {
-				try {
-					this.logger.debug("Getting links for triple: " + triple);
-					this.logger.debug("Dataset: " + this.linkExtractor.getDataset());
-					this.linkExtractor.setTriple((Triple) triple);
-					final Entry<String, Collection<String>> entry = this.linkExtractor.getLinks();
-					if (entry != null) {
-						this.linkWriter.addLinks(entry.getKey(), entry.getValue());
+		try {
+			if (this.linkExtractor.getDataset() != null) {
+				this.loader.forEachRemaining(triple -> {
+					try {
+						this.logger.debug("Getting links for triple: " + triple);
+						this.logger.debug("Dataset: " + this.linkExtractor.getDataset());
+						this.linkExtractor.setTriple((Triple) triple);
+						final Entry<String, Collection<String>> entry = this.linkExtractor.getLinks();
+						if (entry != null) {
+							this.linkWriter.addLinks(entry.getKey(), entry.getValue());
+						}
+					} catch (final InvalidResourceException e) {
+						this.logger.warn("Invalid resource when reading Triple [" + ((Triple) triple).toString() + "]");
 					}
-				} catch (final InvalidResourceException e) {
-					this.logger.warn("Invalid resource when reading Triple [" + ((Triple) triple).toString() + "]");
-				}
-			});
-		} else {
-			this.logger.warn("Could not obtain dataset for source " + this.loader.getSource().toString() + ". No links will be extracted.");
+				});
+			} else {
+				this.logger.warn("Could not obtain dataset for source " + this.loader.getSource().toString() + ". No links will be extracted.");
+			}
+		} catch (final Throwable t) {
+			this.logger.info("Catching throwable in the loop", t);
 		}
-
-		this.loader.close();
-		this.linkWriter.printLinks();
-		this.linkWriter.close();
+		try {
+			this.loader.close();
+			this.linkWriter.printLinks();
+			this.linkWriter.close();
+		} catch (final Throwable t) {
+			this.logger.info("Catching throwable after the loop", t);
+		}
 	}
 
 	// public void runQuads() throws SourceNotOpenableException, DestinationNotOpenableException {
