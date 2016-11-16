@@ -10,8 +10,6 @@ import java.io.PrintWriter;
 import java.nio.file.FileSystems;
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedList;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -24,16 +22,16 @@ import eu.wdaqua.lodrank.exception.DestinationNotOpenableException;
  */
 public class LinkWriter {
 
-	protected Logger								logger;
-	protected PrintWriter							writer;
-	protected HashMap<String, PrintWriter>			writers;
-	protected File									outputFolder;
-	protected String								fileName		= "output.csv";
-	protected HashMap<String, Collection<String>>	links;
-	protected String								separator		= ",";
-	protected boolean								separateFiles	= false;
-	protected boolean								duplicates		= false;
-	protected boolean								overwrite		= false;
+	protected Logger									logger;
+	protected PrintWriter								writer;
+	protected HashMap<String, PrintWriter>				writers;
+	protected File										outputFolder;
+	protected String									fileName		= "output.csv";
+	protected HashMap<String, HashMap<String, Integer>>	links;
+	protected String									separator		= ",";
+	protected boolean									separateFiles	= false;
+	protected boolean									duplicates		= false;
+	protected boolean									overwrite		= false;
 
 	public LinkWriter() {
 		this.logger = LogManager.getLogger();
@@ -70,16 +68,24 @@ public class LinkWriter {
 	}
 
 	public <C extends Collection<String>> void addLinks(final String dataset, final C links) {
-		Collection<String> collection;
 		if (!this.links.containsKey(dataset)) {
-			if (this.duplicates) {
-				collection = new LinkedList<>();
-			} else {
-				collection = new HashSet<>();
-			}
-			this.links.put(dataset, collection);
+			final HashMap<String, Integer> map = new HashMap<>();
+			this.links.put(dataset, map);
 		}
-		this.links.get(dataset).addAll(links);
+		if (this.duplicates) {
+			links.forEach(link -> {
+				this.links.get(dataset).merge(link, 1, (linkValue, counter) -> {
+					if (++counter == Integer.MAX_VALUE) {
+						this.printLinks(true);
+						counter = 1;
+					}
+					return counter;
+				});
+			});
+		} else {
+			links.forEach(link -> this.links.get(dataset).put(link, 1));
+		}
+
 	}
 
 	public void printLinks() {
@@ -89,15 +95,21 @@ public class LinkWriter {
 	public void printLinks(final boolean delete) {
 		this.links.forEach((dataset, links) -> {
 			if (this.separateFiles) {
-				links.forEach(link -> {
-					try {
-						printLinkSeparateFiles(dataset, link);
-					} catch (final DestinationNotOpenableException e) {
-						this.logger.error("Could not open destination file for dataset " + dataset + " .");
+				links.forEach((link, counter) -> {
+					for (int i = 1; i <= counter; i++) {
+						try {
+							printLinkSeparateFiles(dataset, link);
+						} catch (final DestinationNotOpenableException e) {
+							this.logger.error("Could not open destination file for dataset " + dataset + " .");
+						}
 					}
 				});
 			} else {
-				links.forEach(link -> printLinkSingleFile(dataset, link));
+				links.forEach((link, counter) -> {
+					for (int i = 1; i <= counter; i++) {
+						printLinkSingleFile(dataset, link);
+					}
+				});
 			}
 
 		});

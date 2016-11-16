@@ -17,7 +17,7 @@
 		<subjects>true</subjects>
 		<predicates>true</predicates>
 		<objects>true</objects>
-		<duplicates>true</duplicates>
+		<duplicates>false</duplicates>
 	</process>
 	
 	<output>

@@ -134,7 +134,7 @@ public class LinkWriterTest {
 		set.add("http://xmlns.com");
 		this.writer.addLinks("http://csarven.ca", set);
 		assertTrue(this.writer.links.get("http://csarven.ca").size() == 2);
-		assertTrue(this.writer.links.get("http://csarven.ca").contains("http://www.w3.org"));
-		assertTrue(this.writer.links.get("http://csarven.ca").contains("http://xmlns.com"));
+		assertTrue(this.writer.links.get("http://csarven.ca").containsKey("http://www.w3.org"));
+		assertTrue(this.writer.links.get("http://csarven.ca").containsKey("http://xmlns.com"));
 	}
 }
