@@ -144,13 +144,13 @@ public class RDFProcessor {
 			this.logger.info("Catching throwable in the loop", t);
 		}
 		try {
-			this.logger.info("1");
+//			this.logger.info("1");
 			this.loader.close();
-			this.logger.info("2");
+//			this.logger.info("2");
 			this.linkWriter.printLinks();
-			this.logger.info("3");
+//			this.logger.info("3");
 			this.linkWriter.close();
-			this.logger.info("4");
+//			this.logger.info("4");
 		} catch (final Throwable t) {
 			this.logger.info("Catching throwable after the loop", t);
 		}
