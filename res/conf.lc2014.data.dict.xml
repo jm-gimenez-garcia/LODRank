@@ -24,7 +24,7 @@
                 <exclusion>
                         <role_to_exclude>OBJECT</role_to_exclude>
                         <role_to_check>PREDICATE</role_to_check>
-                        <condition>DISTINCT</condition>
+                        <condition>EQUALS</condition>
                         <value>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</value>
                 </exclusion>
         </exclusions>
