@@ -74,7 +74,7 @@ public class LinkWriter {
 		}
 		if (this.duplicates) {
 			links.forEach(link -> {
-				this.links.get(dataset).merge(link, 1, (linkValue, counter) -> {
+				this.links.get(dataset).merge(link, 1, (counter, notUsed) -> {
 					if (++counter == Integer.MAX_VALUE) {
 						this.printLinks(true);
 						counter = 1;
