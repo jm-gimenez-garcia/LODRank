@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+
+	<lang>
+		<value>NQUADS</value>
+		<force>true</force>
+	</lang>
+	
+	<input>
+		<url>http://webdatacommons.org/structureddata/2015-11/files/file.list</url>
+		<start>1</start>
+		<step>1</step>
+		<separator xml:space="preserve"> </separator>
+	</input>
+	
+	<process>
+		<subjects>true</subjects>
+		<predicates>true</predicates>
+		<objects>true</objects>
+		<duplicates>false</duplicates>
+	</process>
+	
+	<output>
+		<folder>output</folder>
+		<file>links.csv</file>
+	</output>
+	
+</configuration>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+
+        <lang>
+                <value>NQUADS</value>
+                <force>true</force>
+        </lang>
+
+        <input>
+                <url>http://km.aifb.kit.edu/projects/btc-2014/000-CONTENTS</url>
+                <start>1</start>
+                <step>1</step>
+                <separator xml:space="preserve"> </separator>
+        </input>
+
+        <process>
+                <subjects>true</subjects>
+                <predicates>true</predicates>
+                <objects>true</objects>
+                <duplicates>true</duplicates>
+        </process>
+
+        <output>
+                <folder>billiontripleschallenge</folder>
+                <file>btc2014.all.csv</file>
+        </output>
+
+</configuration>

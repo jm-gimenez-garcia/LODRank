@@ -1,0 +1,15 @@
+# System files
+.*
+!.gitignore
+
+# Editor backup files
+*~
+
+#Other
+*.jpage
+dependency-reduced-pom.xml
+/bin/
+/output/
+/results/
+/scripts/
+/target/
