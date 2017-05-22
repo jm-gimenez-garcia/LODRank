@@ -12,8 +12,8 @@ import org.apache.jena.riot.Lang;
 import org.junit.Before;
 import org.junit.Test;
 
-import eu.wdaqua.lodrank.Source;
-import eu.wdaqua.lodrank.Source.Format;
+import eu.wdaqua.lodrank.source.Source;
+import eu.wdaqua.lodrank.source.Source.Format;
 import eu.wdaqua.lodrank.exception.DestinationNotOpenableException;
 import eu.wdaqua.lodrank.linkextractor.LinkExtractor;
 import eu.wdaqua.lodrank.linkwriter.LinkWriter;
@@ -72,7 +72,7 @@ public class RDFProcessorRunTriplesTest {
 	}
 
 	/**
-	 * Test method for {@link eu.wdaqua.lodrank.rdfprocessor.RDFProcessor#run(eu.wdaqua.lodrank.Source.Format)}.
+	 * Test method for {@link eu.wdaqua.lodrank.rdfprocessor.RDFProcessor#run(Source.Format)}.
 	 * 
 	 * @throws IOException
 	 */

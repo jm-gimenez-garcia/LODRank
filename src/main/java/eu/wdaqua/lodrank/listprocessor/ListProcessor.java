@@ -12,8 +12,8 @@ import org.apache.jena.riot.RDFLanguages;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import eu.wdaqua.lodrank.Source;
-import eu.wdaqua.lodrank.Source.Input;
+import eu.wdaqua.lodrank.source.Source;
+import eu.wdaqua.lodrank.source.Source.Input;
 import eu.wdaqua.lodrank.exception.SourceNotOpenableException;
 import eu.wdaqua.lodrank.loader.ListLoader;
 import eu.wdaqua.lodrank.loader.RDFLoader;

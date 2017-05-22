@@ -19,7 +19,7 @@ import org.apache.jena.sparql.core.Quad;
 import org.junit.Before;
 import org.junit.Test;
 
-import eu.wdaqua.lodrank.Source;
+import eu.wdaqua.lodrank.source.Source;
 import eu.wdaqua.lodrank.exception.SourceNotOpenableException;
 
 /**
@@ -28,7 +28,7 @@ import eu.wdaqua.lodrank.exception.SourceNotOpenableException;
  */
 public class QuadLoaderTest {
 
-	protected static final String	URL		= "http://download.lodlaundromat.org/85d5a476b56fde200e770cefa0e5033c";
+	protected static final String	URL		= "http://data.dws.informatik.uni-mannheim.de/lodcloud/2014/ISWC-RDB/dump.nq.gz";
 	protected static final String	FILE	= "quads.nq";
 
 	QuadLoader						loader;

@@ -6,7 +6,7 @@ import java.util.Scanner;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import eu.wdaqua.lodrank.Source;
+import eu.wdaqua.lodrank.source.Source;
 import eu.wdaqua.lodrank.exception.SourceNotOpenableException;
 
 public abstract class Loader<I> implements Iterator<I>, AutoCloseable {

@@ -13,6 +13,7 @@ import java.util.NoSuchElementException;
 import java.util.Optional;
 import java.util.zip.GZIPInputStream;
 
+import eu.wdaqua.lodrank.source.Source;
 import org.junit.Test;
 
 import eu.wdaqua.lodrank.exception.SourceNotOpenableException;
@@ -26,7 +27,7 @@ public class SourceTest {
 	Source source;
 
 	/**
-	 * Test method for {@link eu.wdaqua.lodrank.Source#getSource(java.lang.String)}.
+	 * Test method for {@link Source#getSource(java.lang.String)}.
 	 *
 	 * @throws SourceNotOpenableException
 	 */
@@ -37,7 +38,7 @@ public class SourceTest {
 	}
 
 	/**
-	 * Test method for {@link eu.wdaqua.lodrank.Source#getSource(java.lang.String)}.
+	 * Test method for {@link Source#getSource(java.lang.String)}.
 	 *
 	 * @throws SourceNotOpenableException
 	 */
@@ -48,7 +49,7 @@ public class SourceTest {
 	}
 
 	/**
-	 * Test method for {@link eu.wdaqua.lodrank.Source#getSource(java.lang.String)}.
+	 * Test method for {@link Source#getSource(java.lang.String)}.
 	 *
 	 * @throws SourceNotOpenableException
 	 */
@@ -59,7 +60,7 @@ public class SourceTest {
 	}
 
 	/**
-	 * Test method for {@link eu.wdaqua.lodrank.Source#Source(java.io.File)}.
+	 * Test method for {@link Source#Source(java.io.File)}.
 	 */
 	@Test
 	public void testSourceFile() {
@@ -68,7 +69,7 @@ public class SourceTest {
 	}
 
 	/**
-	 * Test method for {@link eu.wdaqua.lodrank.Source#Source(java.net.URL)}.
+	 * Test method for {@link Source#Source(java.net.URL)}.
 	 *
 	 * @throws MalformedURLException
 	 */
@@ -79,7 +80,7 @@ public class SourceTest {
 	}
 
 	/**
-	 * Test method for {@link eu.wdaqua.lodrank.Source#Source(java.net.URL)}.
+	 * Test method for {@link Source#Source(java.net.URL)}.
 	 *
 	 * @throws MalformedURLException
 	 */
@@ -89,7 +90,7 @@ public class SourceTest {
 	}
 
 	/**
-	 * Test method for {@link eu.wdaqua.lodrank.Source#Source(java.io.InputStream)}.
+	 * Test method for {@link Source#Source(java.io.InputStream)}.
 	 */
 	@Test
 	public void testSourceInputStream() {
@@ -98,7 +99,7 @@ public class SourceTest {
 	}
 
 	/**
-	 * Test method for {@link eu.wdaqua.lodrank.Source#isFile()}.
+	 * Test method for {@link Source#isFile()}.
 	 */
 	@Test
 	public void testIsFile() {
@@ -107,7 +108,7 @@ public class SourceTest {
 	}
 
 	/**
-	 * Test method for {@link eu.wdaqua.lodrank.Source#isURL()}.
+	 * Test method for {@link Source#isURL()}.
 	 *
 	 * @throws MalformedURLException
 	 */
@@ -118,7 +119,7 @@ public class SourceTest {
 	}
 
 	/**
-	 * Test method for {@link eu.wdaqua.lodrank.Source#isInputStream()}.
+	 * Test method for {@link Source#isInputStream()}.
 	 */
 	@Test
 	public void testIsInputStream() {
@@ -127,7 +128,7 @@ public class SourceTest {
 	}
 
 	/**
-	 * Test method for {@link eu.wdaqua.lodrank.Source#asFile()}.
+	 * Test method for {@link Source#asFile()}.
 	 */
 	@Test
 	public void testAsFile() {
@@ -136,7 +137,7 @@ public class SourceTest {
 	}
 
 	/**
-	 * Test method for {@link eu.wdaqua.lodrank.Source#asFile()}.
+	 * Test method for {@link Source#asFile()}.
 	 */
 	@Test(expected = NoSuchElementException.class)
 	public void testAsFileNoSuchElementException() {
@@ -145,7 +146,7 @@ public class SourceTest {
 	}
 
 	/**
-	 * Test method for {@link eu.wdaqua.lodrank.Source#asURL()}.
+	 * Test method for {@link Source#asURL()}.
 	 *
 	 * @throws MalformedURLException
 	 */
@@ -156,7 +157,7 @@ public class SourceTest {
 	}
 
 	/**
-	 * Test method for {@link eu.wdaqua.lodrank.Source#asURL()}.
+	 * Test method for {@link Source#asURL()}.
 	 */
 	@Test(expected = NoSuchElementException.class)
 	public void testAsURLNoSuchElementException() {
@@ -165,7 +166,7 @@ public class SourceTest {
 	}
 
 	/**
-	 * Test method for {@link eu.wdaqua.lodrank.Source#asInputStream()}.
+	 * Test method for {@link Source#asInputStream()}.
 	 */
 	@Test
 	public void testAsInputStream() {
@@ -174,7 +175,7 @@ public class SourceTest {
 	}
 
 	/**
-	 * Test method for {@link eu.wdaqua.lodrank.Source#asInputStream()}.
+	 * Test method for {@link Source#asInputStream()}.
 	 */
 	@Test(expected = NoSuchElementException.class)
 	public void testAsInputStreamNoSuchElementException() {
@@ -183,7 +184,7 @@ public class SourceTest {
 	}
 
 	/**
-	 * Test method for {@link eu.wdaqua.lodrank.Source#asOptionalFile()}.
+	 * Test method for {@link Source#asOptionalFile()}.
 	 */
 	@Test
 	public void testAsOptionalFile() {
@@ -192,7 +193,7 @@ public class SourceTest {
 	}
 
 	/**
-	 * Test method for {@link eu.wdaqua.lodrank.Source#asOptionalFile()}.
+	 * Test method for {@link Source#asOptionalFile()}.
 	 */
 	@Test
 	public void testAsOptionalFileEmpty() {
@@ -201,7 +202,7 @@ public class SourceTest {
 	}
 
 	/**
-	 * Test method for {@link eu.wdaqua.lodrank.Source#asOptionalURL()}.
+	 * Test method for {@link Source#asOptionalURL()}.
 	 *
 	 * @throws MalformedURLException
 	 */
@@ -212,7 +213,7 @@ public class SourceTest {
 	}
 
 	/**
-	 * Test method for {@link eu.wdaqua.lodrank.Source#asOptionalURL()}.
+	 * Test method for {@link Source#asOptionalURL()}.
 	 */
 	@Test
 	public void testAsOptionalURLEmpty() {
@@ -221,7 +222,7 @@ public class SourceTest {
 	}
 
 	/**
-	 * Test method for {@link eu.wdaqua.lodrank.Source#asOptionalInputStream()}.
+	 * Test method for {@link Source#asOptionalInputStream()}.
 	 *
 	 * @throws MalformedURLException
 	 */
@@ -232,7 +233,7 @@ public class SourceTest {
 	}
 
 	/**
-	 * Test method for {@link eu.wdaqua.lodrank.Source#asOptionalInputStream()}.
+	 * Test method for {@link Source#asOptionalInputStream()}.
 	 *
 	 * @throws MalformedURLException
 	 */
@@ -243,7 +244,7 @@ public class SourceTest {
 	}
 
 	/**
-	 * Test method for {@link eu.wdaqua.lodrank.Source#getStream()}.
+	 * Test method for {@link Source#getStream()}.
 	 *
 	 * @throws SourceNotOpenableException
 	 */
@@ -255,7 +256,7 @@ public class SourceTest {
 	}
 
 	/**
-	 * Test method for {@link eu.wdaqua.lodrank.Source#getStream()}.
+	 * Test method for {@link Source#getStream()}.
 	 *
 	 * @throws MalformedURLException
 	 * @throws SourceNotOpenableException
@@ -268,7 +269,7 @@ public class SourceTest {
 	}
 
 	/**
-	 * Test method for {@link eu.wdaqua.lodrank.Source#getStream()}.
+	 * Test method for {@link Source#getStream()}.
 	 *
 	 * @throws SourceNotOpenableException
 	 */
@@ -280,7 +281,7 @@ public class SourceTest {
 	}
 
 	/**
-	 * Test method for {@link eu.wdaqua.lodrank.Source#getStream()}.
+	 * Test method for {@link Source#getStream()}.
 	 *
 	 * @throws SourceNotOpenableException
 	 */
@@ -291,14 +292,14 @@ public class SourceTest {
 	}
 
 	/**
-	 * Test method for {@link eu.wdaqua.lodrank.Source#getStream()}.
+	 * Test method for {@link Source#getStream()}.
 	 *
 	 * @throws MalformedURLException
 	 * @throws SourceNotOpenableException
 	 */
 	@Test
 	public void testGetInputStreamFromGZippedURL() throws MalformedURLException, SourceNotOpenableException {
-		this.source = new Source(new URL("http://download.lodlaundromat.org/85d5a476b56fde200e770cefa0e5033c"));
+		this.source = new Source(new URL("http://data.dws.informatik.uni-mannheim.de/lodcloud/2014/ISWC-RDB/dump.nq.gz"));
 		assertTrue(this.source.getInputStream() instanceof GZIPInputStream);
 	}
 

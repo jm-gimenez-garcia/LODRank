@@ -13,7 +13,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import eu.wdaqua.lodrank.Source;
+import eu.wdaqua.lodrank.source.Source;
 import eu.wdaqua.lodrank.exception.DestinationNotOpenableException;
 import eu.wdaqua.lodrank.exception.SourceNotOpenableException;
 import eu.wdaqua.lodrank.linkextractor.LinkExtractor;

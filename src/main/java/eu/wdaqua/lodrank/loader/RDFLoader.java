@@ -14,7 +14,7 @@ import org.apache.jena.riot.lang.PipedRDFIterator;
 import org.apache.jena.riot.lang.PipedRDFStream;
 import org.apache.logging.log4j.LogManager;
 
-import eu.wdaqua.lodrank.Source.Format;
+import eu.wdaqua.lodrank.source.Source.Format;
 import eu.wdaqua.lodrank.exception.SourceNotOpenableException;
 
 /**

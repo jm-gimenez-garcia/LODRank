@@ -14,7 +14,7 @@ import org.apache.jena.sparql.core.Quad;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import eu.wdaqua.lodrank.Source.Format;
+import eu.wdaqua.lodrank.source.Source.Format;
 import eu.wdaqua.lodrank.exception.DestinationNotOpenableException;
 import eu.wdaqua.lodrank.exception.InvalidResourceException;
 import eu.wdaqua.lodrank.exception.SourceNotOpenableException;
@@ -73,7 +73,10 @@ public class RDFProcessor {
 		this.loader.open();
 		try {
 			if (this.linkExtractor.getDataset() != null) {
-				this.loader.forEachRemaining(triple -> {
+			    long numberOfTriples = 0;
+			    while (loader.hasNext()) {
+			        Triple triple = (Triple) loader.next();
+				//this.loader.forEachRemaining(triple -> {
 					try {
 						this.logger.debug("Getting links for triple: " + triple);
 						this.logger.debug("Dataset: " + this.linkExtractor.getDataset());
@@ -85,7 +88,10 @@ public class RDFProcessor {
 					} catch (final InvalidResourceException e) {
 						this.logger.warn("Invalid resource when reading Triple [" + ((Triple) triple).toString() + "]");
 					}
-				});
+					if (numberOfTriples++ % 1000 == 0) {
+					    logger.info("Numper of triples processed = " + numberOfTriples);
+                    }
+				}//);
 			} else {
 				this.logger.warn("Could not obtain dataset for source " + this.loader.getSource().toString() + ". No links will be extracted.");
 			}
@@ -127,6 +133,7 @@ public class RDFProcessor {
 		this.linkWriter.open();
 		this.loader.open();
 		try {
+		    long numberOfTriples = 0;
 			while (this.loader.hasNext()) {
 				final Quad quad = (Quad) this.loader.next();
 				try {
@@ -139,6 +146,9 @@ public class RDFProcessor {
 				} catch (final InvalidResourceException e) {
 					this.logger.debug("Invalid resource when reading Quad " + quad.toString());
 				}
+                if (numberOfTriples++ % 1000 == 0) {
+                    logger.info("Numper of triples processed = " + numberOfTriples);
+                }
 			}
 		} catch (final Throwable t) {
 			this.logger.info("Catching throwable in the loop", t);
